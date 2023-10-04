@@ -56,7 +56,7 @@ article_content:
                   -
                     type: link
                     attrs:
-                      href: 'https://transistor.fmhttps://transistor.fm/how-to-start-a-podcast/?via=justin'
+                      href: 'https://transistor.fm/how-to-start-a-podcast/?via=justin'
                       rel: null
                       target: null
                       title: null
@@ -458,5 +458,5 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1696448029
+updated_at: 1696455867
 ---
