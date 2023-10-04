@@ -1,0 +1,118 @@
+title: Article
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          display: Title
+          width: 66
+          localizable: true
+      -
+        handle: slug
+        field:
+          type: text
+          display: Slug
+          width: 33
+      -
+        handle: article_content
+        field:
+          type: bard
+          display: Content
+          buttons:
+            - bold
+            - italic
+            - anchor
+            - unorderedlist
+            - orderedlist
+            - image
+            - h2
+            - h3
+            - h4
+            - quote
+            - strikethrough
+            - code
+          sets:
+            image:
+              display: 'Single Image'
+              fields:
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    container: main
+                    folder: content
+                    max_files: 1
+                -
+                  handle: size
+                  field:
+                    type: radio
+                    inline: true
+                    display: Width
+                    default: inline
+                    options:
+                      md: inline
+                      xl: oversized
+                      full: 'full width'
+                -
+                  handle: brutalized
+                  field:
+                    type: toggle
+                    instructions: 'CRANK UP THE BRUTALITY?'
+                -
+                  handle: clickable_image_url
+                  field:
+                    type: text
+                    display: 'Clickable image URL'
+            sidebar:
+              display: 'Sidebar Callout'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: markdown
+                    display: 'Sidebar/Callout Content'
+            newsletter:
+              display: 'Newsletter Callout'
+              fields:
+                -
+                  handle: section
+                  field:
+                    type: section
+                    instructions: 'Your Newsletter callout will be shown here.'
+            html_embed:
+              display: 'HTML Embed'
+              fields:
+                -
+                  handle: embed_code
+                  field:
+                    type: textarea
+                    display: 'Embed Code'
+            jumbo_text:
+              display: 'Jumbo Text'
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: bard
+                    spellcheck: true
+                    allow_source: true
+                    autoLink: false
+                    target_blank: false
+                    link_validation: false
+                    force_plain_text: true
+                    clean_pasted_html: false
+                    restrict_assets: false
+                    display: Text
+          style: sans
+          spellcheck: true
+          allow_source: true
+          allow_internal_links: true
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          semantic_elements: false
+          restrict_assets: false
+taxonomies: true

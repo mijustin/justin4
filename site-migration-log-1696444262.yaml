@@ -1,0 +1,4 @@
+-
+  migration: 'Asset container'
+  handle: main
+  error: 'Assets folder cannot be found at path [assets].'

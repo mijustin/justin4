@@ -103,7 +103,6 @@ return [
         resource_path('users'),
         resource_path('preferences.yaml'),
         storage_path('forms'),
-        public_path('assets'),
     ],
 
     /*

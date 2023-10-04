@@ -1,0 +1,7 @@
+template: article
+route: '/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: unlisted
+sort_dir: desc

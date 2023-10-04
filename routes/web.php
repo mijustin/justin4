@@ -16,3 +16,24 @@ use Illuminate\Support\Facades\Route;
 // Route::statamic('example', 'example-view', [
 //    'title' => 'Example'
 // ]);
+
+
+Route::statamic('feed', 'feeds.articles', [
+    'layout' => 'feed',
+    'content_type' => 'atom',
+]);
+Route::statamic('feed/atom', 'feeds.articles', [
+    'layout' => 'feed',
+    'content_type' => 'atom',
+]);
+
+Route::permanentRedirect('ladder', 'freedom');
+Route::permanentRedirect('im-a-fcking-webmaster', 'webmaster');
+Route::permanentRedirect('sideproject', 'bootstrap-side-project');
+Route::permanentRedirect('business-lesson-go-where-the-people-are', 'customer-behavior');
+Route::permanentRedirect('my-embarrassing-itunes-receipt', 'customer-journey-itunes');
+Route::permanentRedirect('stop-networking', 'more-social');
+Route::permanentRedirect('words', 'words.html');
+Route::permanentRedirect('pull-the-market', 'beach');
+Route::permanentRedirect('why-you-need-a-week-of-hustle', 'out-of-office');
+Route::permanentRedirect('blog', 'articles');
