@@ -3,17 +3,164 @@ data:
   favicon: brutal/justin-jackson-dots-circle.png
   twitter: mijustin
   site_name: 'Justin Jackson'
-  working_on_url: 'https://transistor.fm'
+  working_on_url: 'https://transistor.fm/?via=justin'
   bio:
     -
-      type: text
-      text: '<p>I also run <a href="https://megamaker.co">MegaMaker</a> (a private Slack for bootstrappers) and wrote&nbsp;<a href="https://devmarketing.xyz/">Marketing for Developers</a>.<br></p>'
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'I also run '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://megamaker.co'
+                rel: null
+                target: null
+                title: null
+          text: MegaMaker
+        -
+          type: text
+          text: ' (a private Slack for bootstrappers) and wrote '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://devmarketing.xyz/'
+                rel: null
+                target: null
+                title: null
+          text: 'Marketing for Developers'
+        -
+          type: text
+          text: .
   workingon:
     -
-      type: text
-      text: '<p>I''m the co-founder of&nbsp;<a href="https://transistor.fm/?via=justin">Transistor.fm</a>. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and VH1. You can hear about our journey on the <a href="https://saas.transistor.fm">Build your SaaS</a> podcast. Want to start your own podcast? <a href="https://transistor.fm/how-to-start-a-podcast/?via=justin">Read my guide</a>.</p>'
+      type: paragraph
+      content:
+        -
+          type: text
+          text: "I'm the co-founder of "
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://transistor.fm/?via=justin'
+                rel: null
+                target: null
+                title: null
+          text: Transistor.fm
+        -
+          type: text
+          text: '. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and VH1. You can hear about our journey on the '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://saas.transistor.fm'
+                rel: null
+                target: null
+                title: null
+          text: 'Build your SaaS'
+        -
+          type: text
+          text: ' podcast. '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://transistor.fmhttps://transistor.fm/how-to-start-a-podcast/?via=justin'
+                rel: null
+                target: null
+                title: null
+          text: 'Want to start your own podcast?'
   contact:
     -
-      type: text
-      text: '<h3>Ways to contact me</h3><ul><li>Follow me on <a rel="me" href="https://mastodon.social/@mijustin">Mastodon</a></li><li>Follow me on Twitter: <a href="https://twitter.com/mijustin">@mijustin</a></li><li>I also have an email newsletter where I write about building software and digital products. <a href="https://justinjackson.ca/newsletter">Subscriber here</a>.<strong></strong></li><li>You can email me at words [at]&nbsp;megamaker.co</li></ul>'
-  now: '<p>This year, in {{ now format="Y" }}, I''m building a new podcasting startup with my friend Jon Buda. It''s called&nbsp;<a href="https://transistor.fm/">Transistor.fm</a>. If you need podcast hosting, let me know!</p><p>I also run&nbsp;<a href="https://megamaker.co/">MegaMaker</a>&nbsp;(community for geeks who make stuff). This is what''s paying the bills while I build Transistor! My offerings include&nbsp;<a href="https://devmarketing.xyz/">Marketing for Developers</a>&nbsp;and&nbsp;<a href="https://justinjackson.ca/jolt">Jolt</a>, which have sold 6,000+ copies.</p>'
+      type: heading
+      attrs:
+        level: 3
+      content:
+        -
+          type: text
+          text: 'Ways to contact me'
+    -
+      type: paragraph
+      content:
+        -
+          type: text
+          text: 'Connect with me on:'
+        -
+          type: hardBreak
+        -
+          type: text
+          text: "💼\_"
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://www.linkedin.com/in/justinijackson/'
+                rel: null
+                target: null
+                title: null
+          text: LinkedIn
+        -
+          type: hardBreak
+        -
+          type: text
+          text: "🐘\_"
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://mastodon.social/@mijustin'
+                rel: null
+                target: null
+                title: null
+          text: Mastodon
+        -
+          type: hardBreak
+        -
+          type: text
+          text: "🧵\_"
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://www.threads.net/@mijustin'
+                rel: null
+                target: null
+                title: null
+          text: Threads
+        -
+          type: hardBreak
+        -
+          type: text
+          text: "🐦\_"
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://twitter.com/mijustin'
+                rel: null
+                target: null
+                title: null
+          text: Twitter

@@ -1,102 +1,161 @@
 title: Globals
-sections:
+taxonomies: true
+tabs:
   main:
     display: Main
-    fields:
+    sections:
       -
-        handle: favicon
-        field:
-          type: assets
-          container: main
-          folder: /
-          restrict: false
-          max_files: 1
-          display: Favicon
-      -
-        handle: twitter
-        field:
-          type: text
-          display: Twitter
-      -
-        handle: site_name
-        field:
-          type: text
-          display: 'Site Name'
-      -
-        handle: working_on_url
-        field:
-          type: text
-          display: 'Working On URL'
-      -
-        handle: bio
-        field:
-          type: bard
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-          style: sans
-          spellcheck: true
-          allow_source: true
-          allow_internal_links: true
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          semantic_elements: false
-          restrict_assets: false
-          display: Biography
-      -
-        handle: workingon
-        field:
-          type: bard
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-          style: sans
-          spellcheck: true
-          allow_source: true
-          allow_internal_links: true
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          semantic_elements: false
-          restrict_assets: false
-          display: 'Currently working on'
-      -
-        handle: contact
-        field:
-          type: bard
-          buttons:
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-          style: sans
-          spellcheck: true
-          allow_source: true
-          allow_internal_links: true
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          semantic_elements: false
-          restrict_assets: false
-          display: Contact
-taxonomies: true
+        fields:
+          -
+            handle: favicon
+            field:
+              type: assets
+              container: main
+              folder: /
+              restrict: false
+              max_files: 1
+              display: Favicon
+          -
+            handle: twitter
+            field:
+              type: text
+              display: Twitter
+          -
+            handle: site_name
+            field:
+              type: text
+              display: 'Site Name'
+          -
+            handle: working_on_url
+            field:
+              type: text
+              display: 'Working On URL'
+          -
+            handle: bio
+            field:
+              type: bard
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+              style: sans
+              spellcheck: true
+              allow_source: true
+              allow_internal_links: true
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              semantic_elements: false
+              restrict_assets: false
+              display: Biography
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: true
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              hide_display: false
+          -
+            handle: workingon
+            field:
+              type: bard
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+              style: sans
+              spellcheck: true
+              allow_source: true
+              allow_internal_links: true
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              semantic_elements: false
+              restrict_assets: false
+              display: 'Currently working on'
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: true
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              hide_display: false
+          -
+            handle: contact
+            field:
+              type: bard
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+              style: sans
+              spellcheck: true
+              allow_source: true
+              allow_internal_links: true
+              link_noopener: false
+              link_noreferrer: false
+              target_blank: false
+              semantic_elements: false
+              restrict_assets: false
+              display: Contact
+              instructions_position: above
+              listable: hidden
+              visibility: visible
+              replicator_preview: true
+              smart_typography: false
+              save_html: false
+              inline: false
+              toolbar_mode: fixed
+              reading_time: false
+              word_count: false
+              fullscreen: true
+              enable_input_rules: true
+              enable_paste_rules: true
+              remove_empty_nodes: false
+              antlers: true
+              always_show_set_button: false
+              collapse: false
+              previews: true
+              hide_display: false
