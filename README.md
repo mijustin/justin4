@@ -1,6 +1,6 @@
 # justinjackson.ca
 
-[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2F2b822bab-a0b9-48f3-aee3-b7bf15b43294%3Fdate%3D1&style=plastic)](https://forge.laravel.com/servers/723395/sites/2121925)
+[![Laravel Forge Site Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fforge.laravel.com%2Fsite-badges%2Febd56037-d8a8-4379-a9f5-faa5700e65b0&style=plastic)](https://forge.laravel.com/servers/723395/sites/2122001)
 
 ## This site uses Statamic as it's CMS
 
