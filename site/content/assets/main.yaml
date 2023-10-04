@@ -1,0 +1,346 @@
+title: 'Main Assets'
+path: assets
+url: /assets
+assets:
+  img/black-bear-cubs.jpg:
+    title: 'Black Bear Cubs'
+    alt: 'Some black bears standing up'
+  img/coffee-mug.jpg:
+    title: 'Coffee Mug'
+  img/me.jpg:
+    title: Me
+    alt: 'Niles Peppertrout'
+  img/redwood-sign.jpg:
+    title: 'redwood sign'
+  img/desert.jpg:
+    focus: 77-70
+  content/as_seen_on_b.png:
+    alt: 'The logos for Fast Company, Entrepreneur, CBCNews Network, Inc., and LifeHacker'
+  content/freedom-ladder-justin-jackson.png:
+    alt: 'The Freedom Ladder'
+  content/adam-wathan-justin-jackson-jason-fried-taylor-otwell.jpg:
+    alt: 'Adam Wathan, Justin Jackson, Jason Friend, and Taylor Otwell in a room backstage at Laracon 2018 in Chicaco.'
+  content/justin-jackson-support-indie-makers-tweet.png:
+    title: 'Tweet - indie makers'
+    alt: '"The cool thing about buying from indie makers is your dollars get invested directly in their families."'
+  content/justin-jackson-and-levi-allen-having-coffee-in-vernon-bc.jpg:
+    title: 'Justin Jackson and Levi Allen having coffee in Vernon. BC'
+    alt: 'Justin Jackson and Levi Allen having coffee in Vernon. BC'
+  content/justin-jackson-hiten-shah.jpg:
+    title: 'Justin Jackson, Justin A, Hiten Shah'
+    alt: 'Justin Jackson, Justin A, Hiten Shah in San Francisco'
+  content/2018-year-in-review-justin-jackson.png:
+    title: 'Justin Jackson 2018 year in review'
+    alt: 'Justin Jackson 2018 year in review'
+  content/jon-justin.jpg:
+    title: 'Jon Buda and Justin Jackson - founders of Transistor.fm'
+    alt: 'Jon Buda and Justin Jackson - founders of Transistor.fm'
+  content/2018-indie-income-justin-jackson.png:
+    title: 'Justin Jackson''s indie business income 2018'
+    alt: 'Justin Jackson''s indie business income 2018'
+  content/okanagan-lake-beach.png:
+    title: 'Kin Beach, Vernon, BC'
+    alt: 'Kin Beach, Vernon, BC'
+  content/2018-jason-shellen-ryan-holiday-garner-beggs-daryl.png:
+    title: 'Jason Shellen, Daryl, Ryan Holiday, my wife, escape room, Garner Beggs'
+    alt: 'Jason Shellen, Daryl, Ryan Holiday, my wife, escape room, Garner Beggs'
+  content/colorado-james-clear-justin-jackson.jpg:
+    title: 'James Clear, Shawn Blanc, and Sean McCabe''s Colorado retreat (Justin Jackson)'
+    alt: 'James Clear, Shawn Blanc, and Sean McCabe''s Colorado retreat (Justin Jackson)'
+  content/justin-jackson-haggard-cynical.png:
+    title: 'Justin Jackson is haggard'
+    alt: 'Justin Jackson is haggard'
+  content/internet-path-meme.png:
+    title: 'Photograph showing a paved path next to a patch of grass where a dirt path has been worn by people taking a short cut'
+    alt: 'Photograph showing a paved path next to a patch of grass where a dirt path has been worn by people taking a short cut'
+  content/real-deal-skateboard-shop.png:
+    title: 'The Real Deal Skateboard Shop in Stony Plain and Spruce Grove'
+    alt: 'The Real Deal Skateboard Shop in Stony Plain and Spruce Grove'
+  content/steve-schoger-twitter-tips.png:
+    title: 'Steve Schoger Twitter tips about design and UI'
+    alt: 'Steve Schoger Twitter tips about design and UI'
+  content/products-that-win.png:
+    title: '"Good products don''t always win. Products with distribution win."'
+    alt: '"Good products don''t always win. Products with distribution win."'
+  content/comic-creative-fear.png:
+    title: 'Fear of launch comic'
+    alt: 'Fear of launch comic'
+  content/justin-jackson-creative-rut.jpg:
+    title: 'Get out of your creative rut'
+    alt: 'Get out of your creative rut'
+  content/get-outside.jpg:
+    title: 'Get outside'
+    alt: 'Get outside'
+  content/re-focus-on-your-destination.png:
+    title: 'Where do you want to be? What are 3 things you need to do to get there?'
+    alt: 'Where do you want to be? What are 3 things you need to do to get there?'
+  content/bw-memorial-composite-high-school-old-campus-stony-plain.jpg:
+    title: 'Memorial Composite High School in Stony Plain – old campus'
+    alt: 'Memorial Composite High School in Stony Plain – old campus'
+  content/rodney-mullen-pro-skateboarder-startup-advice.jpg:
+    title: 'Rodney Mullen, Pro Skateboarder, on business and startup advice'
+    alt: 'Rodney Mullen, Pro Skateboarder, on business and startup advice'
+  content/small-steam-engine-animated.gif:
+    title: 'Small steam engine animated gif'
+    alt: 'Small steam engine animated gif'
+  content/buffer-revenue-dashboard-baremetrics-crop.png:
+    title: 'Baremetrics'' revenue dashboard for Buffer'
+    alt: 'Baremetrics'' revenue dashboard for Buffer'
+  content/instagram-user-growth.png:
+    title: 'Instagram''s user growth chart'
+    alt: 'Instagram''s user growth chart'
+  content/baremetrics-riding-big-stripe-wave.png:
+    title: 'Baremetrics was like a surfer catching a big wave (Stripe)'
+    alt: 'Baremetrics was like a surfer catching a big wave (Stripe)'
+  content/megamaker-revenue.png:
+    title: 'Total membership revenue: $116,740'
+    alt: 'Total membership revenue: $116,740'
+  content/josh-pigford-projects-tiny.png:
+    title: 'Josh Pigford''s project list'
+    alt: 'Josh Pigford''s project list'
+  failed-products-successful-product.jpg:
+    title: 'Why startups fail'
+    alt: 'Why startups fail'
+  content/chris_hawk_tweet.png:
+    alt: '"Had such a nice interaction w/a barista @Starbucks, I might make this my regular location even though it''s a few miles out of my way."'
+  content/justin-jackson-coffee-hand-model.png:
+    title: 'Justin Jackson hand modelling on Instagram'
+    alt: 'Justin Jackson hand modelling on Instagram'
+  content/jtbd-forces-diagram-b-w.jpg:
+    title: 'The forces affecting purchasing decisions - Jobs to be Done'
+    alt: 'The forces affecting purchasing decisions - Jobs to be Done'
+  content/taylor-otwell-announces-laravel-forge-2014-bw.png:
+    title: 'People react to Laravel Forge for the first time'
+    alt: '"Taylor Otwell announces Laravel Forge. This is BIG!!!"'
+  content/disney-brothers-company.jpg:
+    title: '"Walt Disney in front of Disney Brothers Studio". Photo (circa 1924)  Source: Disney Place (2012)'
+    alt: 'Walt Disney in front of Disney Brothers Studio'
+  content/fairytale-grounds-justin-jackson-who-is-your-audience.jpg:
+    title: 'The Fairytale Grounds, Stony Plain, Alberta'
+    alt: 'The Fairytale Grounds, Stony Plain, Alberta'
+  content/slow-saas-mrr-growth-in-a-small-market.png:
+    title: 'Slow MRR growth in a small SaaS market'
+    alt: 'Slow MRR growth in a small SaaS market'
+  content/the-moraware-software-team.jpg:
+    title: 'The team at Moraware software'
+    alt: 'The team at Moraware software'
+  content/breckenridge-colorado-retreat-1559147731.jpg:
+    title: 'James Clear, Chase Reeves, Tom, Matt, Sean McCabe, Justin Jackson, Shawn Blanc, Brett Kelly, Josh Kaufman'
+    alt: 'James Clear, Chase Reeves, Tom, Matt, Sean McCabe, Justin Jackson, Shawn Blanc, Brett Kelly, Josh Kaufman'
+  content/selling-ice-cream-on-a-hot-day.jpg:
+    title: 'Selling ice cream at the beach on a hot day'
+    alt: 'Selling ice cream at the beach on a hot day'
+  content/an-email-from-jason-fried-37signals.png:
+    title: 'My email to Jason Fried in 2010'
+    alt: 'My email to Jason Fried in 2010'
+  content/commodore-vic-20-computer-justin-jackson-1986-basic-1024x838.jpg:
+    alt: 'Justin on a Commodore Vic-20 programming in BASIC'
+  justin-as-a-kid.jpg:
+    title: 'Justin Jackson as a kid in the 80s'
+    alt: 'Justin Jackson as a kid in the 80s'
+  content/delete-your-project-backlog-software-development.png:
+    title: 'Delete your backlog'
+    alt: 'Delete your backlog'
+  content/tumblr-ads-are-terrible.jpg:
+    title: 'Tumblr ads are terrible'
+    alt: 'Tumblr ads are terrible'
+  content/php-is-a-joke.jpg:
+    title: 'PHP is a joke'
+    alt: 'PHP is a joke'
+  content/laravel-vs-cakephp-codeigniter-zend-yii.png:
+    title: 'Laravel vs other PHP frameworks'
+    alt: 'Laravel vs other PHP frameworks'
+  content/laravel-daily-installs-total-users.png:
+    title: 'How many times has Laravel been installed?'
+    alt: 'How many times has Laravel been installed?'
+  laracon-line-how-to-build-something-people-want.jpg:
+    title: 'Line up at Laracon'
+    alt: 'Line up at Laracon'
+  content/dont-convince-the-market.png:
+    title: 'Founder pulling the market towards their idea'
+    alt: 'Founder pulling the market towards their idea'
+  content/time.png:
+    title: 'Steve Jobs quote on the iPhone'
+    alt: '"You know, everybody has a cell phone, but I don’t know one person who likes their cell phone. I want to make a phone that people love."'
+  content/steve-jobs-time-magazine-2011.png:
+    title: 'Steve Jobs - Time Magazine 2011'
+    alt: 'Steve Jobs - Time Magazine 2011'
+  content/shopify-app-store-revenue.png:
+    title: 'How much revenue does a Shopify app make?'
+    alt: 'How much revenue does a Shopify app make?'
+  content/25k-in-saas-mrr.png:
+    title: 'Graph: going from $750 to $25,015 in MRR in 13 months'
+    alt: 'Graph: going from $750 to $25,015 in MRR in 13 months'
+  content/on-computer-dark-dealing-with-toxic-people.jpg:
+    title: 'How do you deal with toxic people online?'
+    alt: 'How do you deal with toxic people online?'
+  peanuts-tired.jpg:
+    alt: 'Peanuts comic - "I''m already tired tomorrow"'
+  content/mrr-growth-gray.gif:
+    title: 'MRR growth rate'
+    alt: 'MRR growth rate'
+  content/almost-30k-mrr.png:
+    title: 'Almost at $30k'
+    alt: 'Almost at $30k'
+  content/jon-justin-laughing-on-mics.jpg:
+    title: 'Jon Buda and Justin Jackson recording a podcast for Transistor.fm'
+    alt: 'Jon Buda and Justin Jackson recording a podcast for Transistor.fm'
+  30k-gray.png:
+    title: 'Almost at $30k MRR'
+    alt: 'Almost at $30k MRR'
+  content/out-of-office-calendar.png:
+    title: 'Out of office on the calendar'
+    alt: 'Out of office on the calendar'
+  content/apple-line-up-for-new-phone.jpg:
+    title: 'People lined up for the new iphone'
+    alt: 'People lined up for the new iphone'
+  content/computer-boxed-software.jpg:
+    title: 'Boxed computer software from the 80s and 90s'
+    alt: 'Boxed computer software from the 80s and 90s'
+  content/computer-store-pc-big-box-software-display.jpg:
+    title: 'Boxed computer software from the 80s and 90s'
+    alt: 'Boxed computer software from the 80s and 90s'
+  content/the-gap-between-where-i-am-and-want-to-be.png:
+    title: 'The gap between where you are and where you want to be'
+    alt: 'The gap between where you are and where you want to be'
+  content/what-is-jobs-to-be-done-1576540690.png:
+    title: 'What is jobs to be done?'
+    alt: 'What is jobs to be done?'
+  content/purchase-timeline-jtbd.png:
+    title: 'The JTBD purchase timeline'
+    alt: 'The JTBD purchase timeline'
+  content/jtbd-tweet-01.png:
+    title: '"I''ve bought almost one self-help book per day for the last week."'
+    alt: '"I''ve bought almost one self-help book per day for the last week."'
+  content/jtbd-tweet-02.png:
+    title: '"Seriously thinking about getting Kindle Unlimited."'
+    alt: '"Seriously thinking about getting Kindle Unlimited."'
+  content/2019-transistor-jon-justin-go-full-time-mrr.png:
+    title: 'When did Justin and Jon go full-time on Transistor.fm?'
+    alt: 'When did Justin and Jon go full-time on Transistor.fm?'
+  content/justin-jackson-canada-2019-bw-40.jpg:
+    title: 'Justin Jackson''s talk at Laracon 2019'
+    alt: 'Justin Jackson''s talk at Laracon 2019'
+  content/wilderness-hiking.jpg:
+    title: 'Hiking in the BC mountains'
+    alt: 'Hiking in the BC mountains'
+  content/new-york-trip-2019.png:
+    title: 'My trip to New York, 2019'
+    alt: 'My trip to New York, 2019'
+  content/justin-jackson-jon-buda-2019.jpg:
+    title: 'Justin Jackson and Jon Buda in 2019 working on Transistor.fm'
+    alt: 'Justin Jackson and Jon Buda in 2019 working on Transistor.fm'
+  content/margin-in-design.png:
+    title: 'Margin in design'
+    alt: 'Margin in design'
+  content/real-deal-skateboard-shop-ad.jpg:
+    title: 'Grand opening flyer for our skateboard and snowboard shop – The Real Deal'
+    alt: 'Grand opening flyer for our skateboard and snowboard shop – The Real Deal'
+  content/main-entree.jpg:
+    title: 'Main dinner entree'
+    alt: 'Main dinner entree'
+  content/mapping-the-email-value-chain.png:
+    title: 'Mapping the value chain of the email newsletter category'
+    alt: 'Mapping the value chain of the email newsletter category'
+  content/laracon-2019-justin-jackson-speaking.jpg:
+    title: 'Justin Jackson speaking on Times Square, New York City'
+    alt: 'Justin Jackson speaking on Times Square, New York City'
+  business-is-like-surfing.jpg:
+    title: 'Business is like surfing'
+    alt: 'Business is like surfing'
+  content/stop-burning-money.jpg:
+    title: 'Stop burning your startup''s money'
+    alt: 'Stop burning your startup''s money'
+  content/dave-lost-his-job.png:
+    title: 'Dave lost his job.'
+    alt: 'Dave lost his job.'
+  content/covid-usa-unemployment-chart.png:
+    title: 'COVID USA unemployment chart'
+    alt: 'COVID USA unemployment chart'
+  content/the-value-of-a-good-idea.png:
+    alt: 'The value of a good idea'
+  content/basecamp-hill-chart-for-ideas-execution.png:
+    title: 'Basecamp Hill Chart'
+    alt: 'Basecamp Hill Chart'
+  content/ben-tweet.png:
+    title: '"Now I know what Justin was talking about"'
+    alt: '"Now I know what Justin was talking about"'
+  content/google-search.png:
+    title: 'Finding software to buy with a Google search'
+    alt: 'Finding software to buy with a Google search'
+  content/github-wordpress-plugin.png:
+    title: 'Adding a purchasing to-do to Trello'
+    alt: 'Adding a purchasing to-do to Trello'
+  content/do-it-live.png:
+    title: 'Updating my WordPress theme manually'
+    alt: 'Updating my WordPress theme manually'
+  content/wp-pusher-homepage.png:
+    title: 'WP Pusher landing page'
+    alt: 'WP Pusher landing page'
+  content/get-started.png:
+    title: 'Getting started onboarding in WordPress plugin'
+    alt: 'Getting started onboarding in WordPress plugin'
+  content/update-theme.png:
+    title: 'Git workflow for WordPress theme'
+    alt: 'Git workflow for WordPress theme'
+  content/peter-suhm-tweet.png:
+    title: '"I wish I''d bought WP Pusher ages ago."'
+    alt: 'My tweet: "I wish I''d bought WP Pusher ages ago."'
+  content/buy.png:
+    title: 'Pricing plans for WordPress plugin'
+    alt: 'Pricing plans for WordPress plugin'
+  content/checkout.png:
+    title: 'WordPress plugin checkout screen'
+    alt: 'WordPress plugin checkout screen'
+  content/more-likely-to-buy.png:
+    title: 'Tweet: "I''m more likely to buy if there''s PayPal"'
+    alt: 'Tweet: "I''m more likely to buy if there''s PayPal"'
+  content/business-stress.jpg:
+    title: 'Business stress'
+    alt: 'Business stress'
+  content/ratio-coffee-donut-line-vernon.jpg:
+    title: 'Line up outside my favorite coffee shop'
+    alt: 'Line up outside my favorite coffee shop'
+  content/how-many-saas-trials-should-you-get.png:
+    alt: 'How many trials does a SaaS need?'
+  surfer-mistake.jpg:
+    alt: Surfer
+  content/1998-rave-budget.png:
+    alt: '1998 rave budget'
+  content/mediahead-productions-business-card.png:
+    alt: 'Mediahead Productions'
+  content/podcast-guests.png:
+    alt: 'Guests on the Product People podcast: Patio11, Nathan Barry, Ryan Hoover, Rob Walling, Hiten Shah, Chase Reeves'
+  content/mountains-and-tree-ski-resort.jpg:
+    title: 'Mountains and tree in winter'
+    alt: 'Mountains and tree in winter'
+  content/2020-arr-growth.png:
+    title: '2020 annual run rate growth'
+    alt: '2020 annual run rate growth'
+  content/justin-calendar-2020.png:
+    title: 'My monthly calendar - Nov 2020'
+    alt: 'My monthly calendar - Nov 2020'
+  content/the-beach-2020.jpg:
+    title: 'Okanagan Lake and Kalamalka Lake, 2020'
+    alt: 'Okanagan Lake and Kalamalka Lake, 2020'
+  content/rev-per-unit.png:
+    title: 'Revenue per stream/download on iTunes vs Spotify'
+    alt: 'You earn way more for a download on iTunes than a stream on Spotify'
+  content/monthly-sales-needed.png:
+    title: 'Sales / plays per month required for $2,500 in revenue'
+    alt: 'You''ll need nearly 800,000 sales on Spotify, vs 3,623 on iTunes'
+  content/monthly-podcast-listening-stats.png:
+    title: '2020 Monthly Podcast Listening Stats'
+    alt: '2020 Monthly Podcast Listening Stats'
+  content/youtube-creators-punished-by-the-frontpage.png:
+    alt: 'YouTubers are being punished by the front page.'
+  content/clubhouse-social-media-audio-app-rooms.png:
+    alt: 'Clubhouse is a livestreaming audio app that doubles as a social network'
+  content/levi-allen-youtuber-difficult-to-fight.png:
+    alt: 'Levi Allen: "YouTubers and creators are being punished by the algorithm."'
+  podcast-growth-capital.jpg:
+    title: 'Podcast growth, investment, capital'
+    alt: 'Podcast growth, investment, capital'
+  content/needs.jpeg:
+    title: 'The Hierarchy of Needs for new Product Ideas'
+    alt: 'The Hierarchy of Needs for new Product Ideas'
