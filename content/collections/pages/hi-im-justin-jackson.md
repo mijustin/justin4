@@ -15,7 +15,7 @@ article_content:
             content:
               -
                 type: text
-                text: 'Hi, I’m Justin.'
+                text: 'Hi, I’m Justin Jackson.'
           -
             type: paragraph
             content:
@@ -135,8 +135,6 @@ article_content:
       -
         type: text
         text: 'My work has been featured in:'
-      -
-        type: hardBreak
   -
     type: set
     attrs:
@@ -458,5 +456,5 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1696455867
+updated_at: 1696456983
 ---
