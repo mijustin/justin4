@@ -1,0 +1,13 @@
+default_collection_priorities:
+  -
+    id: lorveam9
+    collection: articles
+    priority: 1.0
+    type: collection_priority
+    enabled: true
+  -
+    id: lorvefmv
+    collection: pages
+    priority: 0.5
+    type: collection_priority
+    enabled: true

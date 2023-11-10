@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2306927a8769d250e74650168e6b517f",
+    "content-hash": "fb28b5d49712a1586d509f7a9f64035b",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -3743,6 +3743,62 @@
             "time": "2023-02-08T01:06:31+00:00"
         },
         {
+            "name": "pecotamic/sitemap",
+            "version": "1.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pecotamic/sitemap.git",
+                "reference": "53122bd120bca51447e72bad846fd6f8bb852993"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pecotamic/sitemap/zipball/53122bd120bca51447e72bad846fd6f8bb852993",
+                "reference": "53122bd120bca51447e72bad846fd6f8bb852993",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4|^7.0|^8.0",
+                "statamic/cms": "^3.0|^4.0"
+            },
+            "type": "statamic-addon",
+            "extra": {
+                "statamic": {
+                    "name": "Pecotamic Sitemap",
+                    "description": "Sitemap addon"
+                },
+                "laravel": {
+                    "providers": [
+                        "Pecotamic\\Sitemap\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pecotamic\\Sitemap\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Werner Freytag",
+                    "email": "wf@pecora.de"
+                }
+            ],
+            "description": "Simple sitemap addon for Statamic v3",
+            "keywords": [
+                "Sitemap",
+                "statamic"
+            ],
+            "support": {
+                "issues": "https://github.com/pecotamic/sitemap/issues",
+                "source": "https://github.com/pecotamic/sitemap/tree/1.4.6"
+            },
+            "time": "2023-06-06T13:28:27+00:00"
+        },
+        {
             "name": "phpoption/phpoption",
             "version": "1.9.1",
             "source": {
@@ -5184,16 +5240,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v4.24.0",
+            "version": "v4.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "6d7922ca1defec337896affd64522bfc7828ed4c"
+                "reference": "2c46242758d911ae9b10ab8aa8ec9234841a7495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/6d7922ca1defec337896affd64522bfc7828ed4c",
-                "reference": "6d7922ca1defec337896affd64522bfc7828ed4c",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/2c46242758d911ae9b10ab8aa8ec9234841a7495",
+                "reference": "2c46242758d911ae9b10ab8aa8ec9234841a7495",
                 "shasum": ""
             },
             "require": {
@@ -5274,7 +5330,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.24.0"
+                "source": "https://github.com/statamic/cms/tree/v4.32.0"
             },
             "funding": [
                 {
@@ -5282,7 +5338,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-02T19:39:48+00:00"
+            "time": "2023-11-03T18:08:24+00:00"
         },
         {
             "name": "statamic/stringy",
@@ -11772,7 +11828,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "statamic/migrator": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
