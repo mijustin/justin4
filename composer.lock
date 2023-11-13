@@ -5240,16 +5240,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v4.32.0",
+            "version": "v4.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "2c46242758d911ae9b10ab8aa8ec9234841a7495"
+                "reference": "1c708549b927ef213be43b4044fc2d3e45d8843f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/2c46242758d911ae9b10ab8aa8ec9234841a7495",
-                "reference": "2c46242758d911ae9b10ab8aa8ec9234841a7495",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/1c708549b927ef213be43b4044fc2d3e45d8843f",
+                "reference": "1c708549b927ef213be43b4044fc2d3e45d8843f",
                 "shasum": ""
             },
             "require": {
@@ -5283,6 +5283,7 @@
             "require-dev": {
                 "fakerphp/faker": "~1.10",
                 "google/cloud-translate": "^1.6",
+                "laravel/pint": "^1.0",
                 "mockery/mockery": "^1.3.3",
                 "orchestra/testbench": "^7.0 || ^8.0",
                 "phpunit/phpunit": "^9.0"
@@ -5330,7 +5331,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.32.0"
+                "source": "https://github.com/statamic/cms/tree/v4.33.0"
             },
             "funding": [
                 {
@@ -5338,7 +5339,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-03T18:08:24+00:00"
+            "time": "2023-11-10T15:15:14+00:00"
         },
         {
             "name": "statamic/stringy",
