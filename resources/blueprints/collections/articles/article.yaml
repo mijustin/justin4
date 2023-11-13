@@ -10,7 +10,6 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
               display: Title
               width: 66
               localizable: true
@@ -198,7 +197,6 @@ tabs:
             handle: date
             field:
               type: date
-              required: true
               default: now
               validate:
                 - required
