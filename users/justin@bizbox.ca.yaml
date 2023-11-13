@@ -2,3 +2,7 @@ super: true
 name: 'Justin Jackson'
 id: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
 password_hash: $2y$10$2/Z2QaQRDxv0sQ37bSk86.wtdu/ap520hakixu0mzP1PGShKjABEO
+preferences:
+  collections:
+    articles:
+      after_save: continue_editing
