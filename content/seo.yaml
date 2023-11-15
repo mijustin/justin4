@@ -1,7 +1,6 @@
 title: '@seo:title'
 description: '@seo:content'
-site_name: 'Site Name'
-site_name_position: after
+site_name_position: none
 site_name_separator: '|'
 canonical_url: '@seo:permalink'
 image: '@seo:image'
