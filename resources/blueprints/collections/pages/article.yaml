@@ -1,4 +1,4 @@
-title: Article
+title: Page
 taxonomies: true
 tabs:
   main:
@@ -10,7 +10,6 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
               display: Title
               width: 66
               localizable: true
@@ -170,3 +169,14 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+  SEO:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            handle: seo
+            field:
+              type: seo_pro
+              listable: false
+              display: SEO
