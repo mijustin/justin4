@@ -127,6 +127,39 @@ tabs:
                             clean_pasted_html: false
                             restrict_assets: false
                             display: Text
+                            instructions_position: above
+                            listable: hidden
+                            visibility: visible
+                            replicator_preview: true
+                            buttons:
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                            smart_typography: false
+                            save_html: false
+                            inline: false
+                            toolbar_mode: fixed
+                            reading_time: false
+                            word_count: false
+                            fullscreen: true
+                            enable_input_rules: true
+                            enable_paste_rules: true
+                            remove_empty_nodes: false
+                            antlers: true
+                            link_noopener: false
+                            link_noreferrer: false
+                            always_show_set_button: false
+                            collapse: false
+                            previews: true
+                            hide_display: false
               style: sans
               spellcheck: true
               allow_source: true
@@ -161,22 +194,9 @@ tabs:
       -
         fields:
           -
-            handle: parent
+            handle: date
             field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
-  SEO:
-    display: SEO
-    sections:
-      -
-        fields:
-          -
-            handle: seo
-            field:
-              type: seo_pro
-              listable: false
-              display: SEO
+              type: date
+              default: now
+              validate:
+                - required
