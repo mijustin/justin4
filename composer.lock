@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9197f1473c2465eb8f16efc317dbf6b5",
+    "content-hash": "2306927a8769d250e74650168e6b517f",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -5284,51 +5284,6 @@
                 }
             ],
             "time": "2023-11-10T15:15:14+00:00"
-        },
-        {
-            "name": "statamic/seo-pro",
-            "version": "5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/statamic/seo-pro.git",
-                "reference": "939a609839677526052f82a973c76bd8239bac05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/statamic/seo-pro/zipball/939a609839677526052f82a973c76bd8239bac05",
-                "reference": "939a609839677526052f82a973c76bd8239bac05",
-                "shasum": ""
-            },
-            "require": {
-                "statamic/cms": "^4.1.3"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^7.0 || ^8.0",
-                "phpunit/phpunit": "^9.0"
-            },
-            "type": "library",
-            "extra": {
-                "statamic": {
-                    "name": "Seo Pro",
-                    "description": "Seo Pro addon"
-                },
-                "laravel": {
-                    "providers": [
-                        "Statamic\\SeoPro\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Statamic\\SeoPro\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "support": {
-                "issues": "https://github.com/statamic/seo-pro/issues",
-                "source": "https://github.com/statamic/seo-pro/tree/5.3.0"
-            },
-            "time": "2023-11-16T19:28:04+00:00"
         },
         {
             "name": "statamic/stringy",
