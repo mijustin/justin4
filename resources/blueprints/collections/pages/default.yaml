@@ -10,7 +10,6 @@ tabs:
             handle: title
             field:
               type: text
-              required: true
               validate:
                 - required
           -
@@ -61,3 +60,11 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: s_e_o
