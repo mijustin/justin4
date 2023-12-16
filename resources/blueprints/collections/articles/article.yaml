@@ -200,3 +200,11 @@ tabs:
               default: now
               validate:
                 - required
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: s_e_o
