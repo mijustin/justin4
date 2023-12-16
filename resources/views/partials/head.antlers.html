@@ -1,12 +1,62 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{{ seo_pro:meta }}
+{{ if meta_title }}
+<title>{{ meta_title | sanitize }}</title>
+{{ else }}
+<title>{{ title | sanitize }}</title>
+{{ /if }}
+{{ if meta_description }}
+<link rel="home" href="https://justinjackson.ca/" />
+<link rel="canonical" href="{{ current_url ensure_right="/" }}" />
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed" />
-<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/justinjackson.ca\/","sameAs":["https:\/\/facebook.com\/nerdmullet","https:\/\/instagram.com\/mijustin","https:\/\/ca.linkedin.com\/in\/justinijackson","https:\/\/youtube.com\/justinjackon","https:\/\/twitter.com\/mijustin"],"@id":"#person","name":"Justin Jackson"}</script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i|Shadows+Into+Light" rel="stylesheet">
 <link rel="icon" href="{{ glide:favicon width="32" height="32" }}" sizes="32x32" />
 <link rel="icon" href="{{ glide:favicon width="192" height="192" }}" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="{{ glide:favicon }}" />
-<meta name="msapplication-TileImage" content="{{ glide:favicon }}" />
 <link rel="stylesheet" href="/css/site.css">
+<meta name="msapplication-TileImage" content="{{ glide:favicon }}" />
+<script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/justinjackson.ca\/","sameAs":["https:\/\/facebook.com\/nerdmullet","https:\/\/instagram.com\/mijustin","https:\/\/ca.linkedin.com\/in\/justinijackson","https:\/\/youtube.com\/justinjackon","https:\/\/twitter.com\/mijustin"],"@id":"#person","name":"Justin Jackson"}</script>
+<meta name="description" content="{{ meta_description | sanitize }}">
+{{ else }}
+<meta name="description" content="{{ default_meta.description | sanitize }}">
+{{ /if }}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="Justin Jackson">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en">
+<meta property="og:url" content="https://justinjackson.ca{{ url }}/">
+<meta property="og:logo" content="http://justinjackson.ca/assets/brutal/justin-jackson-dots-circle.png" />
+{{ if meta_title }}
+<meta property="og:title" content="{{ meta_title | sanitize }}">
+{{ else }}
+<meta property="og:title" content="{{ title | sanitize }}">
+{{ /if }}
+{{ if meta_description }}
+<meta property="og:description" content="{{ meta_description | sanitize }}">
+{{ else }}
+<meta property="og:description" content="{{ default_meta.description | sanitize }}">
+{{ /if }}
+<meta property="og:image" content="https://justinjackson.ca{{ social_sharing_image:url ?? '/assets/justin-jackson-02.jpeg' }}" />
+<meta property="og:image:width" content="{{ social_sharing_image:width ?? '1200' }}">
+<meta property="og:image:height" content="{{ social_sharing_image:height ?? '728' }}">
+{{ if social_sharing_image:alt }}
+<meta property="og:image:alt" content="{{ social_sharing_image:alt | sanitize }}">
+{{ elseif meta_description }}
+<meta property="og:image:alt" content="{{ meta_description | sanitize }}">
+{{ else }}
+<meta property="og:image:alt" content="{{ default_meta.description | sanitize }}">
+{{ /if }}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@mijustin">
+<meta name="twitter:creator" content="@mijustin">
+<meta name="twitter:image" content="https://justinjackson.ca{{ social_sharing_image:url ?? '/assets/justin-jackson-02.jpeg' }}" />
+{{ if meta_title }}
+<meta name="twitter:title" content="{{ meta_title | sanitize }}">
+{{ else }}
+<meta name="twitter:title" content="{{ title | sanitize }}">
+{{ /if }}
+{{ if meta_description }}
+<meta name="twitter:description" content="{{ meta_description | sanitize }}">
+{{ else }}
+<meta name="twitter:description" content="{{ default_meta.description | sanitize }}">
+{{ /if }}
