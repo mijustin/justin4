@@ -1,15 +1,21 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 {{ if meta_title }}
 <title>{{ meta_title | sanitize }}</title>
 {{ else }}
 <title>{{ title | sanitize }}</title>
 {{ /if }}
-{{ if meta_description }}
+
 <link rel="home" href="https://justinjackson.ca/" />
 <link rel="canonical" href="{{ current_url ensure_right="/" }}" />
 <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed" />
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i|Shadows+Into+Light" rel="stylesheet">
-
+<link rel="stylesheet" href="/css/site.css">
 <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Person","url":"https:\/\/justinjackson.ca\/","sameAs":["https:\/\/facebook.com\/nerdmullet","https:\/\/instagram.com\/mijustin","https:\/\/ca.linkedin.com\/in\/justinijackson","https:\/\/youtube.com\/justinjackon","https:\/\/twitter.com\/mijustin"],"@id":"#person","name":"Justin Jackson"}</script>
+
+{{ if meta_description }}
 <meta name="description" content="{{ meta_description | sanitize }}">
 {{ else }}
 <meta name="description" content="{{ default_meta.description | sanitize }}">
