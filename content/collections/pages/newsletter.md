@@ -17,7 +17,21 @@ article_content:
         text: 'marketing and growth tips for SaaS founders'
       -
         type: text
-        text: ", indie hackers, and startups. In my newsletter, I'll share many experiments I run with my company (Transistor)."
+        text: ", indie hackers, and startups. In my newsletter, I'll share many experiments I run with my company ("
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://transistor.fm/?via=justin'
+              rel: null
+              target: null
+              title: null
+        text: Transistor
+      -
+        type: text
+        text: ).
   -
     type: blockquote
     content:
@@ -202,5 +216,5 @@ custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189295
+updated_at: 1705189316
 ---
