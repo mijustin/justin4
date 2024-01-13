@@ -216,5 +216,7 @@ custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189316
+updated_at: 1705189374
+meta_title: "Justin Jackson's newsletter"
+meta_description: "In 2024, the main theme of my newsletter\_is marketing and growth tips for SaaS founders, indie hackers, and startups. In my newsletter, I'll share many experiments I run with my company (Transistor)."
 ---
