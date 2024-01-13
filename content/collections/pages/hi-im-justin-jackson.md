@@ -142,6 +142,63 @@ article_content:
                   -
                     type: link
                     attrs:
+                      href: 'https://justinjackson.ca/margin'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Good businesses have margin'
+              -
+                type: text
+                text: ' – Look for business models with good margins with minimal complexity. Choose work that gives you breathing room.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/build-new-startup'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'How I would build a new startup if I had to do it all over again'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/surfing'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Business is surfing'
+              -
+                type: text
+                text: " – Just like in surfing, the founder paddles out, assesses potential opportunities (waves) based on customer demand, and works hard to catch a promising one. Once on the wave, the market's momentum carries them forward, requiring skillful navigation to maximize the opportunity's potential while being mindful of competitors and external factors."
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
                       href: 'https://justinjackson.ca/bootstrap-side-project'
                       rel: null
                       target: null
@@ -431,7 +488,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705175122
+updated_at: 1705176632
 date: '2024-01-13'
 custom_structured_data:
   code: null
