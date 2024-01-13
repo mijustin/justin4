@@ -17,7 +17,7 @@ article_content:
         text: 'marketing and growth tips for SaaS founders'
       -
         type: text
-        text: ", indie hackers, and startups. In my newsletter, I'll share many experiments I run with my company ("
+        text: ", indie hackers, and startups. In each issue, I'll share the real-world results from experiments I'm running at my company ("
       -
         type: text
         marks:
@@ -216,7 +216,7 @@ custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189525
+updated_at: 1705189565
 meta_title: "Justin Jackson's newsletter"
 meta_description: "In 2024, the main theme of my newsletter\_is marketing and growth tips for SaaS founders, indie hackers, and startups. See real-world results from my experiments."
 social_sharing_image: content/justin-jackson-berlin.jpg
