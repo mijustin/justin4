@@ -537,9 +537,11 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705190073
+updated_at: 1705190140
 date: '2024-01-13'
 custom_structured_data:
   code: null
   mode: htmlmixed
+meta_title: 'Justin Jackson – SaaS, bootstrapping, marketing'
+meta_description: 'Co-founder of Transistor.fm (podcast hosting). I write about SaaS marketing, bootstrapping startups, the good life, calm companies, and creating a better society.'
 ---
