@@ -219,6 +219,43 @@ article_content:
                   -
                     type: link
                     attrs:
+                      href: 'https://justinjackson.ca/the-market'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Why you should go after a market with strong demand'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/beach'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Selling stuff on a busy beach'
+              -
+                type: text
+                text: " – It's unlikely you'll convince someone to buy something where there wasn't already existing demand."
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
                       href: 'https://justinjackson.ca/bootstrap-side-project'
                       rel: null
                       target: null
@@ -226,7 +263,7 @@ article_content:
                 text: 'Can you bootstrap a startup on the side?'
               -
                 type: text
-                text: "\_– I wrote this when Transistor was new, and not making much revenue."
+                text: "\_– I wrote this when Transistor was new and not making much revenue."
       -
         type: listItem
         content:
@@ -243,7 +280,7 @@ article_content:
                       rel: null
                       target: null
                       title: null
-                text: "Let's start about startup costs"
+                text: "Let's start about your startup costs"
               -
                 type: text
                 text: " – a topic that doesn't get discussed enough in the business community."
@@ -272,11 +309,6 @@ article_content:
         content:
           -
             type: paragraph
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
             content:
               -
                 type: text
@@ -291,7 +323,7 @@ article_content:
                 text: 'This is a webpage'
               -
                 type: text
-                text: "\_– by far the most popular thing I’ve written, it’s been translated into 16 different languages and was featured by "
+                text: "\_– by far the most popular thing I’ve written; it’s been translated into 16 different languages and was featured by "
               -
                 type: text
                 marks:
@@ -493,7 +525,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705188965
+updated_at: 1705189120
 date: '2024-01-13'
 custom_structured_data:
   code: null
