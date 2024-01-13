@@ -199,6 +199,26 @@ article_content:
                   -
                     type: link
                     attrs:
+                      href: 'https://justinjackson.ca/build'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'How to build something people want'
+              -
+                type: text
+                text: ' – a practical framework for determining what products and services people want.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
                       href: 'https://justinjackson.ca/bootstrap-side-project'
                       rel: null
                       target: null
@@ -252,21 +272,6 @@ article_content:
         content:
           -
             type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'https://justinjackson.ca/build'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'How to build something people want'
-              -
-                type: text
-                text: ' – a step by step guide.'
       -
         type: listItem
         content:
@@ -488,7 +493,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705176632
+updated_at: 1705188965
 date: '2024-01-13'
 custom_structured_data:
   code: null
