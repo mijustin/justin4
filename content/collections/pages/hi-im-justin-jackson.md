@@ -35,38 +35,41 @@ article_content:
                 text: Transistor.fm
               -
                 type: text
-                text: '. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and VH1. You can hear about our journey on the '
+                text: ' (podcast hosting and analytics). I write about '
               -
                 type: text
                 marks:
                   -
                     type: link
                     attrs:
-                      href: 'https://saas.transistor.fm'
+                      href: 'https://justinjackson.ca/best-saas-marketing-strategies'
                       rel: null
                       target: null
                       title: null
-                text: 'Build your SaaS'
+                text: 'SaaS marketing'
               -
                 type: text
-                text: ' podcast. '
+                text: ', the reality of '
               -
                 type: text
                 marks:
                   -
                     type: link
                     attrs:
-                      href: 'https://transistor.fm/how-to-start-a-podcast/?via=justin'
+                      href: 'https://justinjackson.ca/bootstrap'
                       rel: null
                       target: null
                       title: null
-                text: 'Want to start your own podcast?'
+                text: 'bootstrapping startups'
+              -
+                type: text
+                text: ', pursuing a good life, building calm companies, business ethics, and creating a better society.'
   -
     type: paragraph
     content:
       -
         type: text
-        text: "I write a\_"
+        text: "In 2024, the main theme for my blog and my\_"
       -
         type: text
         marks:
@@ -80,49 +83,21 @@ article_content:
         text: newsletter
       -
         type: text
-        text: "\_about bootstrapping,\_"
+        text: "\_is marketing and growth tips for indie hackers, SaaS founders, and startups. I'll be sharing a lot of my experiments (and the results) in my newsletter. "
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'https://justinjackson.ca/the-good-life'
+              href: 'https://justinjackson.ca/newsletter'
               rel: null
-              target: _blank
+              target: null
               title: null
-        text: 'the good life'
+        text: 'Subscribe here'
       -
         type: text
-        text: ", building\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://justinjackson.ca/margin'
-              rel: null
-              target: _blank
-              title: null
-        text: 'calm companies'
-      -
-        type: text
-        text: ", business ethics, creating a better society, and\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://justinjackson.ca/the-ethics-of-ai-driven-content'
-              rel: null
-              target: _blank
-              title: null
-        text: 'introspecting the tech industry'
-      -
-        type: text
-        text: .​
+        text: " so you don't miss anything:"
   -
     type: set
     attrs:
@@ -456,5 +431,9 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1696456983
+updated_at: 1705175122
+date: '2024-01-13'
+custom_structured_data:
+  code: null
+  mode: htmlmixed
 ---
