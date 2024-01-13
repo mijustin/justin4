@@ -525,7 +525,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189120
+updated_at: 1705189755
 date: '2024-01-13'
 custom_structured_data:
   code: null
