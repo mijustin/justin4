@@ -69,21 +69,33 @@ article_content:
     content:
       -
         type: text
-        text: "In 2024, the main theme for my blog and my\_"
+        text: 'In 2024, the main theme of my writing will be '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'marketing and growth tips for SaaS founders'
+      -
+        type: text
+        text: ". I'll share the real-world results from experiments I'm running at my company ("
       -
         type: text
         marks:
           -
             type: link
             attrs:
-              href: 'https://justinjackson.ca/newsletter'
+              href: 'https://transistor.fm/?via=justin'
               rel: null
               target: null
               title: null
-        text: newsletter
+        text: Transistor
       -
         type: text
-        text: "\_is marketing and growth tips for indie hackers, SaaS founders, and startups. I'll be sharing a lot of my experiments (and the results) in my newsletter. "
+        text: ).
+  -
+    type: paragraph
+    content:
       -
         type: text
         marks:
@@ -525,7 +537,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189755
+updated_at: 1705190073
 date: '2024-01-13'
 custom_structured_data:
   code: null
