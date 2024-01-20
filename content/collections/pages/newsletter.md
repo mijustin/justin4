@@ -170,6 +170,13 @@ article_content:
             type: text
             text: '– Nick Beattie'
   -
+    type: set
+    attrs:
+      id: lrlgn8wl
+      values:
+        type: html_embed
+        embed_code: '<blockquote class="twitter-tweet tw-align-center" data-conversation="none"><p lang="en" dir="ltr">this is the only kind of newsletter i love to read<br><br>hyped for this</p>&mdash; Rox (@RoxCodes) <a href="https://twitter.com/RoxCodes/status/1746320180224073880?ref_src=twsrc%5Etfw">January 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+  -
     type: paragraph
     content:
       -
@@ -216,7 +223,7 @@ custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1705189928
+updated_at: 1705718322
 meta_title: "Justin Jackson's newsletter"
 meta_description: "In 2024, the main theme of my newsletter\_is marketing and growth tips for SaaS founders. Get real-world results from experiments I'm running at my company (Transistor)."
 social_sharing_image: content/justin-jackson-berlin.jpg
