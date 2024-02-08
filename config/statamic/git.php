@@ -15,7 +15,7 @@ return [
     |
     */
 
-     'enabled' => env('STATAMIC_GIT_ENABLED', true),
+    'enabled' => env('STATAMIC_GIT_ENABLED', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -132,7 +132,7 @@ return [
 
     'commands' => [
         'git add {{ paths }}',
-        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }}"',
+        'git -c "user.name={{ name }}" -c "user.email={{ email }}" commit -m "{{ message }} [BOT]"',
     ],
 
     /*
