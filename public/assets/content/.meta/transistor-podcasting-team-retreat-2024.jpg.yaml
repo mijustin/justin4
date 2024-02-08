@@ -1,6 +1,7 @@
-data: {  }
+data:
+  alt: 'The Transistor team retreat in Nashville'
 size: 275149
-last_modified: 1703293377
+last_modified: 1703293503
 width: 1800
 height: 950
 mime_type: image/jpeg
