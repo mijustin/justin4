@@ -35,38 +35,67 @@ article_content:
                 text: Transistor.fm
               -
                 type: text
-                text: '. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and VH1. You can hear about our journey on the '
+                text: ' (podcast hosting and analytics). I write about '
               -
                 type: text
                 marks:
                   -
                     type: link
                     attrs:
-                      href: 'https://saas.transistor.fm'
+                      href: 'https://justinjackson.ca/best-saas-marketing-strategies'
                       rel: null
                       target: null
                       title: null
-                text: 'Build your SaaS'
+                text: 'SaaS marketing'
               -
                 type: text
-                text: ' podcast. '
+                text: ', the reality of '
               -
                 type: text
                 marks:
                   -
                     type: link
                     attrs:
-                      href: 'https://transistor.fm/how-to-start-a-podcast/?via=justin'
+                      href: 'https://justinjackson.ca/bootstrap'
                       rel: null
                       target: null
                       title: null
-                text: 'Want to start your own podcast?'
+                text: 'bootstrapping startups'
+              -
+                type: text
+                text: ', pursuing a good life, building calm companies, business ethics, and creating a better society.'
   -
     type: paragraph
     content:
       -
         type: text
-        text: "I write a\_"
+        text: 'In 2024, the main theme of my writing will be '
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'marketing and growth tips for SaaS founders'
+      -
+        type: text
+        text: ". I'll share the real-world results from experiments I'm running at my company ("
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://transistor.fm/?via=justin'
+              rel: null
+              target: null
+              title: null
+        text: Transistor
+      -
+        type: text
+        text: ).
+  -
+    type: paragraph
+    content:
       -
         type: text
         marks:
@@ -77,52 +106,10 @@ article_content:
               rel: null
               target: null
               title: null
-        text: newsletter
+        text: 'Subscribe here'
       -
         type: text
-        text: "\_about bootstrapping,\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://justinjackson.ca/the-good-life'
-              rel: null
-              target: _blank
-              title: null
-        text: 'the good life'
-      -
-        type: text
-        text: ", building\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://justinjackson.ca/margin'
-              rel: null
-              target: _blank
-              title: null
-        text: 'calm companies'
-      -
-        type: text
-        text: ", business ethics, creating a better society, and\_"
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://justinjackson.ca/the-ethics-of-ai-driven-content'
-              rel: null
-              target: _blank
-              title: null
-        text: 'introspecting the tech industry'
-      -
-        type: text
-        text: .​
+        text: " so you don't miss anything:"
   -
     type: set
     attrs:
@@ -167,6 +154,120 @@ article_content:
                   -
                     type: link
                     attrs:
+                      href: 'https://justinjackson.ca/margin'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Good businesses have margin'
+              -
+                type: text
+                text: ' – Look for business models with good margins with minimal complexity. Choose work that gives you breathing room.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/build-new-startup'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'How I would build a new startup if I had to do it all over again'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/surfing'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Business is surfing'
+              -
+                type: text
+                text: " – Just like in surfing, the founder paddles out, assesses potential opportunities (waves) based on customer demand, and works hard to catch a promising one. Once on the wave, the market's momentum carries them forward, requiring skillful navigation to maximize the opportunity's potential while being mindful of competitors and external factors."
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/build'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'How to build something people want'
+              -
+                type: text
+                text: ' – a practical framework for determining what products and services people want.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/the-market'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Why you should go after a market with strong demand'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/beach'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Selling stuff on a busy beach'
+              -
+                type: text
+                text: " – It's unlikely you'll convince someone to buy something where there wasn't already existing demand."
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
                       href: 'https://justinjackson.ca/bootstrap-side-project'
                       rel: null
                       target: null
@@ -174,7 +275,7 @@ article_content:
                 text: 'Can you bootstrap a startup on the side?'
               -
                 type: text
-                text: "\_– I wrote this when Transistor was new, and not making much revenue."
+                text: "\_– I wrote this when Transistor was new and not making much revenue."
       -
         type: listItem
         content:
@@ -191,7 +292,7 @@ article_content:
                       rel: null
                       target: null
                       title: null
-                text: "Let's start about startup costs"
+                text: "Let's start about your startup costs"
               -
                 type: text
                 text: " – a topic that doesn't get discussed enough in the business community."
@@ -227,26 +328,6 @@ article_content:
                   -
                     type: link
                     attrs:
-                      href: 'https://justinjackson.ca/build'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'How to build something people want'
-              -
-                type: text
-                text: ' – a step by step guide.'
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
                       href: 'http://justinjackson.ca/words.html'
                       rel: null
                       target: null
@@ -254,7 +335,7 @@ article_content:
                 text: 'This is a webpage'
               -
                 type: text
-                text: "\_– by far the most popular thing I’ve written, it’s been translated into 16 different languages and was featured by "
+                text: "\_– by far the most popular thing I’ve written; it’s been translated into 16 different languages and was featured by "
               -
                 type: text
                 marks:
@@ -455,6 +536,12 @@ seo:
   image: /assets/justin-jackson-tech-conference-speaker.png
 template: home
 slug: hi-im-justin-jackson
-updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1696456983
+updated_by: fe8d76c9-1d99-4ac8-85af-56c977718f1f
+updated_at: 1707415164
+date: '2024-01-13'
+custom_structured_data:
+  code: null
+  mode: htmlmixed
+meta_title: 'Justin Jackson – SaaS, bootstrapping, marketing'
+meta_description: 'Co-founder of Transistor.fm (podcast hosting). I write about SaaS marketing, bootstrapping startups, the good life, calm companies, and creating a better society.'
 ---

@@ -1,35 +1,230 @@
+---
+id: 27eaa7bb-7009-4639-bd29-7e8c25984a7b
+blueprint: article
 title: "Justin Jackson's newsletter"
 article_content:
   -
-    type: text
-    text: '<p>I write about bootstrapping,&nbsp;<a href="https://justinjackson.ca/the-good-life" target="_blank" rel="noopener noreferrer">the good life</a>, building&nbsp;<a href="https://justinjackson.ca/margin" target="_blank" rel="noopener noreferrer">calm companies</a>, business ethics, creating a better society, and&nbsp;<a href="https://justinjackson.ca/the-ethics-of-ai-driven-content" target="_blank" rel="noopener noreferrer">introspecting the tech industry</a>.​</p><blockquote><p>👉&nbsp;<a href="https://justinjackson.ck.page/posts">Sample newsletter</a>.</p><p>📧&nbsp;<a href="https://app.convertkit.com/landing_pages/793?v=7">Subscribe here</a>.</p></blockquote><p>I send shorter emails, 2-3x per week, featuring a few "thoughts from today."</p><p><strong>I encourage subscribers to respond to each email.</strong>&nbsp;When I get permission, I include reader thoughts when&nbsp;<a href="https://justinjackson.ca/pessimistic#responses" target="_blank">I write these up as longer posts</a>.</p>'
+    type: paragraph
+    content:
+      -
+        type: text
+        text: "In 2024, the main theme of my newsletter\_is "
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'marketing and growth tips for SaaS founders'
+      -
+        type: text
+        text: ". In each issue, I'll share the real-world results from experiments I'm running at my company ("
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://transistor.fm/?via=justin'
+              rel: null
+              target: null
+              title: null
+        text: Transistor
+      -
+        type: text
+        text: ).
   -
-    type: newsletter
+    type: blockquote
+    content:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "👉\_"
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: 'https://justinjackson.ck.page/posts'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Sample newsletter'
+          -
+            type: text
+            text: .
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: "📧\_"
+          -
+            type: text
+            marks:
+              -
+                type: link
+                attrs:
+                  href: 'https://app.convertkit.com/landing_pages/793?v=7'
+                  rel: null
+                  target: null
+                  title: null
+            text: 'Subscribe here'
+          -
+            type: text
+            text: .
   -
-    type: text
-    text: '<blockquote><p>“I’m on Justin’s newsletter, and I love it!”<br>– Nick Beattie</p></blockquote><p>My work has been featured in:</p>'
+    type: paragraph
+    content:
+      -
+        type: text
+        text: "I generally send one email per week. In addition to marketing topics, I write about bootstrapping,\_"
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://justinjackson.ca/the-good-life'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: 'the good life'
+      -
+        type: text
+        text: ", building\_"
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://justinjackson.ca/margin'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: 'calm companies'
+      -
+        type: text
+        text: ", business ethics, creating a better society, and\_"
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://justinjackson.ca/the-ethics-of-ai-driven-content'
+              rel: 'noopener noreferrer'
+              target: _blank
+              title: null
+        text: 'introspecting the tech industry'
+      -
+        type: text
+        text: .​
   -
-    type: image
-    image: content/as_seen_on_b.png
-    size: full
-    brutalized: false
+    type: paragraph
+    content:
+      -
+        type: text
+        marks:
+          -
+            type: bold
+        text: 'I encourage subscribers to respond to each email.'
+      -
+        type: text
+        text: "\_When I get permission, I include reader thoughts when\_"
+      -
+        type: text
+        marks:
+          -
+            type: link
+            attrs:
+              href: 'https://justinjackson.ca/pessimistic#responses'
+              rel: null
+              target: _blank
+              title: null
+        text: 'I write these up as longer posts'
+      -
+        type: text
+        text: .
   -
-    type: text
-    text: '<p>{{ workingon }}</p>'
+    type: set
+    attrs:
+      id: wBCTJyr2
+      values:
+        type: newsletter
   -
-    type: image
-    image: content/jon-buda-justin-jackson.jpg
-    size: md
-    brutalized: true
+    type: blockquote
+    content:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: '“I’m on Justin’s newsletter, and I love it!”'
+          -
+            type: hardBreak
+          -
+            type: text
+            text: '– Nick Beattie'
   -
-    type: text
-    text: '<p>{{ bio }}</p>'
+    type: set
+    attrs:
+      id: lrlgn8wl
+      values:
+        type: html_embed
+        embed_code: '<blockquote class="twitter-tweet tw-align-center" data-conversation="none"><p lang="en" dir="ltr">this is the only kind of newsletter i love to read<br><br>hyped for this</p>&mdash; Rox (@RoxCodes) <a href="https://twitter.com/RoxCodes/status/1746320180224073880?ref_src=twsrc%5Etfw">January 13, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: 'My work has been featured in:'
+  -
+    type: set
+    attrs:
+      id: lxZSGrh7
+      values:
+        type: image
+        image: content/as_seen_on_b.png
+        size: full
+        brutalized: false
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: '{{ workingon }}'
+  -
+    type: set
+    attrs:
+      id: hx2A1AuP
+      values:
+        type: image
+        image: content/jon-buda-justin-jackson.jpg
+        size: md
+        brutalized: true
+  -
+    type: paragraph
+    content:
+      -
+        type: text
+        text: '{{ bio }}'
 seo:
   title: "Justin Jackson's newsletter"
   description: 'I write about bootstrapping, the good life, building calm companies, business ethics, creating a better society, and introspecting the tech industry.​'
   image: /assets/content/commodore-vic-20-computer-justin-jackson-1986-basic-1024x838.jpg
 template: newsletter
-id: 27eaa7bb-7009-4639-bd29-7e8c25984a7b
-published: true
 slug: newsletter
-blueprint: article
+date: '2024-01-13'
+custom_structured_data:
+  code: null
+  mode: htmlmixed
+updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
+updated_at: 1705718322
+meta_title: "Justin Jackson's newsletter"
+meta_description: "In 2024, the main theme of my newsletter\_is marketing and growth tips for SaaS founders. Get real-world results from experiments I'm running at my company (Transistor)."
+social_sharing_image: content/justin-jackson-berlin.jpg
+---
