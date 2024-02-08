@@ -2,7 +2,7 @@ title: 'Hi, I''m Justin Jackson'
 article_content:
   -
     type: jumbo_text
-    text: '<p>Hi, I’m Justin.</p><p>{{ workingon }}</p><p>{{ bio }}</p>'
+    text: '<p>Hi, I’m Justin</p><p>{{ workingon }}</p><p>{{ bio }}</p>'
   -
     type: text
     text: '<p>I write a&nbsp;<a href="https://justinjackson.ca/newsletter">newsletter</a>&nbsp;about bootstrapping,&nbsp;<a href="https://justinjackson.ca/the-good-life" target="_blank" rel="noopener noreferrer">the good life</a>, building&nbsp;<a href="https://justinjackson.ca/margin" target="_blank" rel="noopener noreferrer">calm companies</a>, business ethics, creating a better society, and&nbsp;<a href="https://justinjackson.ca/the-ethics-of-ai-driven-content" target="_blank" rel="noopener noreferrer">introspecting the tech industry</a>.​</p>'
