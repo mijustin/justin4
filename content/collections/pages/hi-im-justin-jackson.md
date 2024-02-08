@@ -15,7 +15,7 @@ article_content:
             content:
               -
                 type: text
-                text: 'Hi, I’m Justin Jackson'
+                text: 'Hi, I’m Justin Jackson.'
           -
             type: paragraph
             content:
