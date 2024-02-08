@@ -1,7 +1,7 @@
 ---
 id: 8ea5e804-f13f-46fc-ac06-f2c82ffcecd9
 blueprint: article
-title: "Hi, I'm Justin Jackson."
+title: "Hi, I'm Justin Jackson"
 article_content:
   -
     type: set
@@ -15,7 +15,7 @@ article_content:
             content:
               -
                 type: text
-                text: 'Hi, I’m Justin Jackson.'
+                text: 'Hi, I’m Justin Jackson'
           -
             type: paragraph
             content:
@@ -537,7 +537,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: fe8d76c9-1d99-4ac8-85af-56c977718f1f
-updated_at: 1707415532
+updated_at: 1707415548
 date: '2024-01-13'
 custom_structured_data:
   code: null
