@@ -1,4 +1,8 @@
 name: 'Jason Beggs'
 super: true
 id: fe8d76c9-1d99-4ac8-85af-56c977718f1f
-password_hash: $2y$10$4OFTDClbhKYgFqLiiuouJOXh1Y54oqFdZ/u3W9iOSoSHvYDseLNBa
+password_hash: $2y$10$BqXpNWFIr7mWz/W74aaR5ufYuAhhvv1f6uihQdP8oquz3c85tGyP.
+preferences:
+  collections:
+    articles:
+      after_save: continue_editing
