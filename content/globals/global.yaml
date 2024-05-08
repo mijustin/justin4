@@ -59,7 +59,7 @@ data:
           text: Transistor.fm
         -
           type: text
-          text: '. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and VH1. You can hear about our journey on the '
+          text: '. We do podcast hosting and analytics for folks like Indie Hackers, the Vegas Golden Knights, and Laravel. You can hear about our journey on the '
         -
           type: text
           marks:
