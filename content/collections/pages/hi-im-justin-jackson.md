@@ -154,6 +154,46 @@ article_content:
                   -
                     type: link
                     attrs:
+                      href: 'statamic://entry::5d2d8618-147b-49f9-b4eb-961233865736'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'Calm Company'
+              -
+                type: text
+                text: " – Calm companies are profitable, value freedom, have a purpose, and improve the team's lives. Frenzied companies are crisis-driven."
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/build'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'How to build something people want'
+              -
+                type: text
+                text: ' – a practical framework for determining what products and services people want.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
                       href: 'https://justinjackson.ca/margin'
                       rel: null
                       target: null
@@ -162,6 +202,26 @@ article_content:
               -
                 type: text
                 text: ' – Look for business models with good margins with minimal complexity. Choose work that gives you breathing room.'
+      -
+        type: listItem
+        content:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: link
+                    attrs:
+                      href: 'https://justinjackson.ca/prosumers/'
+                      rel: null
+                      target: null
+                      title: null
+                text: 'The prosumer market is underrated'
+              -
+                type: text
+                text: " – The normal advice for people building SaaS companies is \"Don't build software for consumers (B2C); build it for businesses (B2B).\" But, there's a third category that doesn't get very much attention: prosumers."
       -
         type: listItem
         content:
@@ -199,26 +259,6 @@ article_content:
               -
                 type: text
                 text: " – Just like in surfing, the founder paddles out, assesses potential opportunities (waves) based on customer demand, and works hard to catch a promising one. Once on the wave, the market's momentum carries them forward, requiring skillful navigation to maximize the opportunity's potential while being mindful of competitors and external factors."
-      -
-        type: listItem
-        content:
-          -
-            type: paragraph
-            content:
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'https://justinjackson.ca/build'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'How to build something people want'
-              -
-                type: text
-                text: ' – a practical framework for determining what products and services people want.'
       -
         type: listItem
         content:
@@ -292,10 +332,10 @@ article_content:
                       rel: null
                       target: null
                       title: null
-                text: "Let's start about your startup costs"
+                text: "Let's talk about your startup costs"
               -
                 type: text
-                text: " – a topic that doesn't get discussed enough in the business community."
+                text: ' – a topic that is under-examined in the business community.'
       -
         type: listItem
         content:
@@ -315,7 +355,7 @@ article_content:
                 text: 'When should you move on?'
               -
                 type: text
-                text: " – how to decide when it's time to quit a project."
+                text: " – How do you decide when it's time to quit a project?"
       -
         type: listItem
         content:
@@ -528,16 +568,17 @@ article_content:
       id: nZg1AuUX
       values:
         type: image
-        image: content/justin-jackson-twitter-optimized.jpg
+        image: justin-podcast-studio-office.jpg
         size: md
         brutalized: false
+        clickable_image_url: 'https://www.youtube.com/justinjackson'
 seo:
   description: 'Building software? An app? SaaS? I send a newsletter on Saturday morning with stories, lessons, and tips for building an indie software business.'
   image: /assets/justin-jackson-tech-conference-speaker.png
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1715189646
+updated_at: 1715189932
 date: '2024-01-13'
 custom_structured_data:
   code: null
