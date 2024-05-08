@@ -21,7 +21,7 @@ article_content:
             content:
               -
                 type: text
-                text: "I'm the co-founder of "
+                text: 'I co-founded '
               -
                 type: text
                 marks:
@@ -78,7 +78,7 @@ article_content:
         text: 'marketing and growth tips for SaaS founders'
       -
         type: text
-        text: ". I'll share the real-world results from experiments I'm running at my company ("
+        text: ". I'll share the real-world results from experiments at my company ("
       -
         type: text
         marks:
@@ -536,8 +536,8 @@ seo:
   image: /assets/justin-jackson-tech-conference-speaker.png
 template: home
 slug: hi-im-justin-jackson
-updated_by: fe8d76c9-1d99-4ac8-85af-56c977718f1f
-updated_at: 1707416001
+updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
+updated_at: 1715189646
 date: '2024-01-13'
 custom_structured_data:
   code: null
