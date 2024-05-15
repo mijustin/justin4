@@ -2,14 +2,14 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
-use Statamic\API\File;
-use Statamic\API\YAML;
-use Statamic\API\Parse;
-use Statamic\API\Fieldset;
 use Illuminate\Http\Request;
-use Statamic\Addons\SeoPro\TagData;
 use Statamic\Addons\SeoPro\Settings;
+use Statamic\Addons\SeoPro\TagData;
 use Statamic\Addons\SeoPro\TranslatesFieldsets;
+use Statamic\API\Fieldset;
+use Statamic\API\File;
+use Statamic\API\Parse;
+use Statamic\API\YAML;
 
 class HumansController extends Controller
 {

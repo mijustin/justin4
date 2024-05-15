@@ -50,8 +50,7 @@ class RedirectsProcessor
         AutoRedirectsManager $autoRedirectsManager,
         RedirectsLogger $redirectsLogger,
         array $addonConfig
-    )
-    {
+    ) {
         $this->manualRedirectsManager = $manualRedirectsManager;
         $this->redirectsLogger = $redirectsLogger;
         $this->autoRedirectsManager = $autoRedirectsManager;
@@ -63,7 +62,6 @@ class RedirectsProcessor
      *
      * Manual redirects take precedence over the auto ones.
      *
-     * @param Request $request
      *
      * @throws RedirectException
      */
@@ -75,7 +73,7 @@ class RedirectsProcessor
 
     public function shouldLogRedirect()
     {
-        return (bool)$this->addonConfig->get('log_redirects_enable', true);
+        return (bool) $this->addonConfig->get('log_redirects_enable', true);
     }
 
     private function performAutoRedirect(Request $request)
@@ -116,7 +114,7 @@ class RedirectsProcessor
 
         $redirectUrl = $this->normalizeRedirectUrl($redirect->getTo(), $route, $request);
 
-        if (!$redirectUrl) {
+        if (! $redirectUrl) {
             return;
         }
 
@@ -153,10 +151,8 @@ class RedirectsProcessor
     /**
      * Normalize the given target URL to an URL we can redirect to.
      *
-     * @param string $targetUrl The URL we should redirect to
-     * @param string $matchedRoute The matched route by the current request
-     * @param Request $request
-     *
+     * @param  string  $targetUrl  The URL we should redirect to
+     * @param  string  $matchedRoute  The matched route by the current request
      * @return string|null
      */
     private function normalizeRedirectUrl($targetUrl, $matchedRoute, Request $request)
@@ -167,10 +163,10 @@ class RedirectsProcessor
             if (strpos($matchedRoute, $wildcardParameter) !== false) {
                 // The special {any} parameter captures any number of URL segments.
                 $pattern = str_replace(['/', $wildcardParameter], ["\/", '(.*)'], $matchedRoute);
-                preg_match('%' . $pattern . '%', $request->getPathInfo(), $matches);
+                preg_match('%'.$pattern.'%', $request->getPathInfo(), $matches);
 
                 return str_replace($wildcardParameter, $matches[1], $targetUrl);
-            } else if (preg_match_all('%\{(\w+)\}%', $matchedRoute, $matches)) {
+            } elseif (preg_match_all('%\{(\w+)\}%', $matchedRoute, $matches)) {
                 // Any other parameters capture exactly one URL segment.
                 $segmentsRoute = explode('/', ltrim($matchedRoute, '/'));
                 $segmentsRequestPath = explode('/', ltrim($request->getPathInfo(), '/'));
@@ -188,7 +184,7 @@ class RedirectsProcessor
             }
 
             return $targetUrl;
-        } else if (Str::startsWith($targetUrl, 'http')) {
+        } elseif (Str::startsWith($targetUrl, 'http')) {
             return $targetUrl;
         }
 
@@ -222,7 +218,7 @@ class RedirectsProcessor
             $route = $this->routeCollections[$which]->match($request);
 
             if ($this->doesCurrentLocaleMatchBaseUrl($request)) {
-                return $this->getBaseUrlOfCurrentLocale() . $route->getUri();
+                return $this->getBaseUrlOfCurrentLocale().$route->getUri();
             }
 
             return $route->getUri();
@@ -250,7 +246,8 @@ class RedirectsProcessor
                 $from = preg_replace("#^{$baseUrl}(\/.*)#", '$1', $from);
             }
 
-            $route = new Route(['GET'], $from, function () {});
+            $route = new Route(['GET'], $from, function () {
+            });
 
             if (strpos($from, $this->getWildcardParameter()) !== false) {
                 $route->where(self::WILDCARD_NAME, '(.*)');
@@ -308,7 +305,8 @@ class RedirectsProcessor
         }
     }
 
-    private function logRedirectsParseException($e) {
+    private function logRedirectsParseException($e)
+    {
         Log::error($e->getMessage(), ['original' => $e->getPrevious()->getMessage()]);
     }
 }

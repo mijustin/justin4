@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SeoPro\Fieldtypes;
 
-use Statamic\Extend\Fieldtype;
 use Statamic\CP\FieldtypeFactory;
+use Statamic\Extend\Fieldtype;
 
 class SeoProFieldtype extends Fieldtype
 {
@@ -16,6 +16,7 @@ class SeoProFieldtype extends Fieldtype
         })->merge($data)->map(function ($value, $key) {
             $config = $this->getFieldConfig('fields.'.$key);
             $fieldtype = FieldtypeFactory::create(array_get($config, 'type'), $config);
+
             return $fieldtype->preProcess($value);
         })->all();
     }
@@ -25,6 +26,7 @@ class SeoProFieldtype extends Fieldtype
         return collect($data)->map(function ($value, $key) {
             $config = $this->getFieldConfig('fields.'.$key);
             $fieldtype = FieldtypeFactory::create(array_get($config, 'type'), $config);
+
             return $fieldtype->process($value);
         })->filter()->all();
     }

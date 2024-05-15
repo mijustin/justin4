@@ -4,7 +4,7 @@ $env = app()->environment();
 
 return [
     'environments' => 'Environments',
-    'environments_instruct' => 'Spock will only run on the specified environments. The current environment is `'. app()->environment() . '`',
+    'environments_instruct' => 'Spock will only run on the specified environments. The current environment is `'.app()->environment().'`',
 
     'git_push' => 'Git Push',
     'git_push_instruct' => 'Whether Spock should perform a `git push` after the default git commands.',

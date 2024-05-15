@@ -4,8 +4,8 @@ namespace Statamic\Addons\SeoPro;
 
 use Statamic\API\File;
 use Statamic\API\YAML;
-use Statamic\Extend\Extensible;
 use Statamic\Events\Data\AddonSettingsSaved;
+use Statamic\Extend\Extensible;
 
 class Settings
 {

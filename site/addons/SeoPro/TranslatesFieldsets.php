@@ -10,6 +10,7 @@ trait TranslatesFieldsets
 
         $contents['sections'] = collect($contents['sections'])->map(function ($section) use ($fieldset) {
             $section['fields'] = $this->translateFieldsetFields($section['fields'], $fieldset->name());
+
             return $section;
         });
 
@@ -24,6 +25,7 @@ trait TranslatesFieldsets
             $key = 'addons.SeoPro::fieldsets/'.$fieldset.'.'.$name;
             $field['display'] = $this->translateFieldsetKey($key);
             $field['instructions'] = $this->translateFieldsetKey($key.'_instruct');
+
             return $field;
         })->all();
     }

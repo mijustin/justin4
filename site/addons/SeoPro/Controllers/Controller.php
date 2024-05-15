@@ -2,11 +2,11 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
-use Statamic\CP\Publish\ProcessesFields;
 use Statamic\CP\Publish\PreloadsSuggestions;
+use Statamic\CP\Publish\ProcessesFields;
 
 abstract class Controller extends \Statamic\Extend\Controller
 {
-    use ProcessesFields;
     use PreloadsSuggestions;
+    use ProcessesFields;
 }

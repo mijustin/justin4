@@ -9,11 +9,8 @@ use Statamic\Addons\Redirects\ManualRedirect;
 use Statamic\Addons\Redirects\ManualRedirectsManager;
 use Statamic\Addons\Redirects\RedirectsLogger;
 use Statamic\Addons\Redirects\RedirectsProcessor;
-use Statamic\API\Config;
 use Statamic\API\Entry;
 use Statamic\API\Page;
-use Statamic\API\Stache;
-use Statamic\Config\Addons;
 use Statamic\Config\Settings;
 
 /**
@@ -65,10 +62,10 @@ class RedirectsTest extends TestCase
     {
         parent::setUp();
 
-        $this->storagePath = __DIR__ . '/temp/';
+        $this->storagePath = __DIR__.'/temp/';
         $this->redirectsLogger = new RedirectsLogger($this->storagePath);
-        $this->autoRedirectsManager = new AutoRedirectsManager($this->storagePath . 'auto.yaml', $this->redirectsLogger);
-        $this->manualRedirectsManager = new ManualRedirectsManager($this->storagePath . 'manual.yaml', $this->redirectsLogger);
+        $this->autoRedirectsManager = new AutoRedirectsManager($this->storagePath.'auto.yaml', $this->redirectsLogger);
+        $this->manualRedirectsManager = new ManualRedirectsManager($this->storagePath.'manual.yaml', $this->redirectsLogger);
 
         // Swap our services in Laravel's service container.
         $this->app->singleton(RedirectsLogger::class, function () {
@@ -100,6 +97,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider redirectUrlsDataProvider
      */
     public function it_should_redirect_based_on_auto_redirects($from, $to)
@@ -121,6 +119,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider redirectUrlsDataProvider
      */
     public function it_should_redirect_based_on_manual_redirects($from, $to)
@@ -150,6 +149,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider placeholdersDataProvider
      */
     public function it_should_redirect_using_parameters($redirects, $requestUrl, $redirectedUrl)
@@ -201,7 +201,7 @@ class RedirectsTest extends TestCase
             [
                 [
                     '/foo/{any}' => '/unmatched/{any}',
-                    '/news/{year}/{month}/{slug}' => '/blog/{month}/{year}/{slug}'
+                    '/news/{year}/{month}/{slug}' => '/blog/{month}/{year}/{slug}',
                 ],
                 '/news/2019/01/slug',
                 '/blog/01/2019/slug',
@@ -231,6 +231,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider timedActivationDataProvider
      */
     public function it_should_redirect_correctly_using_timed_activation($start, $end, $shouldRedirect)
@@ -273,6 +274,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider queryStringsDataProvider
      */
     public function it_should_redirect_query_strings_to_the_target_url($shouldRetainQueryStrings, $queryStrings)
@@ -286,7 +288,7 @@ class RedirectsTest extends TestCase
             ->add($redirect)
             ->flush();
 
-        $this->get('/not-existing-source' . $queryStrings);
+        $this->get('/not-existing-source'.$queryStrings);
 
         $hasQueryStringsAtTargetUrl = strpos($this->response->getTargetUrl(), $queryStrings) !== false;
 
@@ -307,6 +309,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider statusCodeDataProvider
      */
     public function it_should_redirect_using_a_correct_status_code($statusCode)
@@ -334,6 +337,7 @@ class RedirectsTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider localesDataProvider
      */
     public function it_should_redirect_correctly_based_on_locales($redirectLocale, $locale, $shouldRedirect)
@@ -511,7 +515,7 @@ class RedirectsTest extends TestCase
 
     public function createApplication()
     {
-        $app = require statamic_path('/bootstrap') . '/app.php';
+        $app = require statamic_path('/bootstrap').'/app.php';
 
         $app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
 
@@ -528,11 +532,11 @@ class RedirectsTest extends TestCase
             $entry->delete();
         }
 
-        @unlink($this->storagePath . 'auto.yaml');
-        @unlink($this->storagePath . 'manual.yaml');
-        @unlink($this->storagePath . 'log_auto.yaml');
-        @unlink($this->storagePath . 'log_manual.yaml');
-        @unlink($this->storagePath . 'log_404.yaml');
+        @unlink($this->storagePath.'auto.yaml');
+        @unlink($this->storagePath.'manual.yaml');
+        @unlink($this->storagePath.'log_auto.yaml');
+        @unlink($this->storagePath.'log_manual.yaml');
+        @unlink($this->storagePath.'log_404.yaml');
 
         parent::tearDown();
     }

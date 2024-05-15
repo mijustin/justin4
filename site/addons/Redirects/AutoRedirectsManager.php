@@ -7,7 +7,6 @@ class AutoRedirectsManager extends RedirectsManager
     /**
      * Add or update the given redirect.
      *
-     * @param AutoRedirect $redirect
      *
      * @return AutoRedirectsManager
      */
@@ -31,7 +30,7 @@ class AutoRedirectsManager extends RedirectsManager
                 return $redirectData['to'] === $redirect->getFromUrl();
             })
             ->each(function ($redirectData, $fromUrl) use ($redirect) {
-               $this->redirects[$fromUrl]['to'] = $redirect->getToUrl();
+                $this->redirects[$fromUrl]['to'] = $redirect->getToUrl();
             });
 
         $this->redirects[$redirect->getFromUrl()] = $data;
@@ -54,8 +53,7 @@ class AutoRedirectsManager extends RedirectsManager
     /**
      * Remove all redirects affected by the given content UUID.
      *
-     * @param string $contentId
-     *
+     * @param  string  $contentId
      * @return AutoRedirectsManager
      */
     public function removeRedirectsOfContentId($contentId)
@@ -74,13 +72,12 @@ class AutoRedirectsManager extends RedirectsManager
     /**
      * Get a redirect by URL.
      *
-     * @param string $url
-     *
+     * @param  string  $url
      * @return AutoRedirect
      */
     public function get($url)
     {
-        if (!$this->exists($url)) {
+        if (! $this->exists($url)) {
             return null;
         }
 

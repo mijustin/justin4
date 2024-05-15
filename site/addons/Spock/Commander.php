@@ -9,15 +9,17 @@ use Symfony\Component\Process\Exception\ProcessFailedException;
 class Commander
 {
     protected $log;
+
     protected $user;
+
     protected $event;
+
     protected $config = [];
+
     protected $environment;
+
     protected $commands = [];
 
-    /**
-     * @param Log $log
-     */
     public function __construct(Log $log)
     {
         $this->log = $log;
@@ -30,7 +32,7 @@ class Commander
      */
     public function handle()
     {
-        if (!$this->shouldRunCommands()) {
+        if (! $this->shouldRunCommands()) {
             return;
         }
 
@@ -42,7 +44,7 @@ class Commander
     /**
      * Set the environment.
      *
-     * @param string $environment
+     * @param  string  $environment
      * @return self
      */
     public function environment($environment)
@@ -55,7 +57,7 @@ class Commander
     /**
      * Get or set the event.
      *
-     * @param string $event
+     * @param  string  $event
      * @return self
      */
     public function event($event = null)
@@ -72,7 +74,7 @@ class Commander
     /**
      * Set the user that triggered the event.
      *
-     * @param User $user
+     * @param  User  $user
      * @return self
      */
     public function user($user)
@@ -85,7 +87,7 @@ class Commander
     /**
      * Set the Spock config.
      *
-     * @param array $config
+     * @param  array  $config
      * @return self
      */
     public function config($config)
@@ -112,13 +114,13 @@ class Commander
 
     protected function isEventAllowed()
     {
-        return !in_array(get_class($this->event), array_get($this->config, 'ignore_events', []));
+        return ! in_array(get_class($this->event), array_get($this->config, 'ignore_events', []));
     }
 
     /**
      * Set the commands to be run.
      *
-     * @param array $commands
+     * @param  array  $commands
      * @return self
      */
     public function setCommands($commands)
@@ -163,7 +165,6 @@ class Commander
     /**
      * Run a single command.
      *
-     * @param Process $command
      * @return void
      */
     protected function run(Process $command)
@@ -188,7 +189,7 @@ class Commander
         $this->log->error(vsprintf("Spock command exited unsuccessfully:\nCommand: %s\nOutput: %s\nError: %s", [
             $command->command(),
             $output,
-            $error
+            $error,
         ]));
     }
 }

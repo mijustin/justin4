@@ -2,15 +2,12 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
-use Statamic\API\File;
-use Statamic\API\YAML;
-use Statamic\API\Fieldset;
 use Illuminate\Http\Request;
 use Statamic\Addons\SeoPro\Settings;
-use Statamic\CP\Publish\ProcessesFields;
-use Statamic\CP\Publish\ValidationBuilder;
-use Statamic\CP\Publish\PreloadsSuggestions;
 use Statamic\Addons\SeoPro\TranslatesFieldsets;
+use Statamic\API\Fieldset;
+use Statamic\API\File;
+use Statamic\API\YAML;
 
 class DefaultsController extends Controller
 {
@@ -47,6 +44,7 @@ class DefaultsController extends Controller
     {
         $contents = File::get($this->getDirectory().'/resources/fieldsets/defaults.yaml');
         $fieldset = Fieldset::create('defaults', YAML::parse($contents));
+
         return $this->translateFieldset($fieldset);
     }
 }

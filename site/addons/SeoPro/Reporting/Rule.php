@@ -5,7 +5,9 @@ namespace Statamic\Addons\SeoPro\Reporting;
 abstract class Rule
 {
     protected $page;
+
     protected $report;
+
     protected $validatesPages = true;
 
     public function id()

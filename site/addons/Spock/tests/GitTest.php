@@ -3,14 +3,12 @@
 namespace Statamic\Addons\Spock;
 
 use Mockery;
-use Illuminate\Contracts\Logging\Log;
 use Statamic\Contracts\Data\Users\User;
-use Symfony\Component\Process\Process as SymfonyProcess;
 
 class GitTest extends \PHPUnit_Framework_TestCase
 {
     /** @test */
-    function compiles_commands()
+    public function compiles_commands()
     {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('username')->andReturn('johnsmith');
@@ -20,12 +18,12 @@ class GitTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([
             'git add one.txt',
             'git add two.txt',
-            'git commit -m "Data saved by johnsmith"', # Action is the "pretty" version of the class name.
+            'git commit -m "Data saved by johnsmith"', // Action is the "pretty" version of the class name.
         ], $git->commands());
     }
 
     /** @test */
-    function commit_message_from_unauthenticated_user_contains_no_username()
+    public function commit_message_from_unauthenticated_user_contains_no_username()
     {
         $git = new Git([], new DataSaved, null);
 
@@ -37,7 +35,7 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function git_push_gets_appended_if_specified_in_config()
+    public function git_push_gets_appended_if_specified_in_config()
     {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('username')->andReturn('johnsmith');
@@ -53,7 +51,7 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_adds_commands_before_if_specified_in_config()
+    public function it_adds_commands_before_if_specified_in_config()
     {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('username')->andReturn('johnsmith');
@@ -72,7 +70,7 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_adds_commands_after_if_specified_in_config()
+    public function it_adds_commands_after_if_specified_in_config()
     {
         $user = Mockery::mock(User::class);
         $user->shouldReceive('username')->andReturn('johnsmith');
@@ -91,7 +89,7 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_adds_username_to_commit_command_if_configured()
+    public function it_adds_username_to_commit_command_if_configured()
     {
         $git = new Git(['git_username' => 'Spock'], new DataSaved);
 
@@ -99,7 +97,7 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_adds_email_to_commit_command_if_configured()
+    public function it_adds_email_to_commit_command_if_configured()
     {
         $git = new Git(['git_email' => 'spock@domain.com'], new DataSaved);
 
@@ -107,11 +105,11 @@ class GitTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function it_adds_email_and_username_to_commit_command_if_configured()
+    public function it_adds_email_and_username_to_commit_command_if_configured()
     {
         $git = new Git([
             'git_username' => 'Spock',
-            'git_email' => 'spock@domain.com'
+            'git_email' => 'spock@domain.com',
         ], new DataSaved);
 
         $this->assertContains('git -c "user.name=Spock" -c "user.email=spock@domain.com" commit -m "Data saved"', $git->commands());

@@ -4,6 +4,8 @@ namespace Statamic\Addons\Redirects;
 
 use Illuminate\Support\Facades\Log;
 use Statamic\API\Config;
+use Statamic\API\Nav;
+use Statamic\API\Page as PageAPI;
 use Statamic\API\URL;
 use Statamic\API\User;
 use Statamic\Contracts\Data\Pages\Page;
@@ -13,8 +15,6 @@ use Statamic\Events\Data\PageMoved;
 use Statamic\Events\Data\PageSaved;
 use Statamic\Exceptions\RedirectException;
 use Statamic\Extend\Listener;
-use Statamic\API\Nav;
-use Statamic\API\Page as PageAPI;
 use Symfony\Component\HttpFoundation\Response;
 
 class RedirectsListener extends Listener
@@ -39,12 +39,10 @@ class RedirectsListener extends Listener
 
     /**
      * Extend the main navigation of the control panel.
-     *
-     * @param $nav
      */
     public function addNavItems($nav)
     {
-        if (!app(RedirectsAccessChecker::class)->hasAccess(User::getCurrent())) {
+        if (! app(RedirectsAccessChecker::class)->hasAccess(User::getCurrent())) {
             return;
         }
 
@@ -78,13 +76,12 @@ class RedirectsListener extends Listener
     {
         $css = $this->css->url('styles.css');
 
-        return '<link rel="stylesheet" type="text/css" href="' . $css . '">';
+        return '<link rel="stylesheet" type="text/css" href="'.$css.'">';
     }
 
     /**
      * Check for redirects if a 404 response is created by Statamic.
      *
-     * @param Response $response
      *
      * @throws RedirectException
      */
@@ -100,7 +97,7 @@ class RedirectsListener extends Listener
 
         // If we reach this, no redirect exception has been thrown, so log the 404.
         if ($this->getConfigBool('log_404_enable')) {
-            $route = $request->getBaseUrl() . $request->getPathInfo();
+            $route = $request->getBaseUrl().$request->getPathInfo();
             $this->tryLogging404($route);
         }
     }
@@ -115,7 +112,7 @@ class RedirectsListener extends Listener
         $originalAttributes = $event->original['attributes'];
 
         // If the original path is not set, the page is newly created, no redirects needed.
-        if (!isset($originalAttributes['path'])) {
+        if (! isset($originalAttributes['path'])) {
             return;
         }
 
@@ -127,12 +124,12 @@ class RedirectsListener extends Listener
 
     public function onContentSaved(ContentSaved $event)
     {
-        if (!$this->getConfigBool('auto_redirect_enable')) {
+        if (! $this->getConfigBool('auto_redirect_enable')) {
             return;
         }
 
         $content = $event->data;
-        if (!$content->uri()) {
+        if (! $content->uri()) {
             return;
         }
 
@@ -142,7 +139,7 @@ class RedirectsListener extends Listener
             $oldSlug = null;
             if ($locale === Config::getDefaultLocale() && isset($event->original['attributes']['slug'])) {
                 $oldSlug = $event->original['attributes']['slug'];
-            } else if (isset($event->original['data'][$locale]) && isset($event->original['data'][$locale]['slug'])){
+            } elseif (isset($event->original['data'][$locale]) && isset($event->original['data'][$locale]['slug'])) {
                 $oldSlug = $event->original['data'][$locale]['slug'];
             }
 
@@ -154,6 +151,7 @@ class RedirectsListener extends Listener
 
             if ($slug === $oldSlug) {
                 $this->deleteRedirectsOfUrl($localizedContent->url());
+
                 continue;
             }
 
@@ -181,7 +179,7 @@ class RedirectsListener extends Listener
 
     private function handlePageRedirects(Page $page, $oldPath, $newPath, $original = null)
     {
-        if (!$this->getConfigBool('auto_redirect_enable')) {
+        if (! $this->getConfigBool('auto_redirect_enable')) {
             return;
         }
 
@@ -260,7 +258,7 @@ class RedirectsListener extends Listener
         $page = PageAPI::find($pageId);
         $childPages = $page->children(1);
 
-        if (!$childPages->count()) {
+        if (! $childPages->count()) {
             return;
         }
 

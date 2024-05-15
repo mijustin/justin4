@@ -126,11 +126,12 @@ class RedirectsLogger
 
     private function getYamlFile($which)
     {
-        return $this->storagePath . 'log_' . $which . '.yaml';
+        return $this->storagePath.'log_'.$which.'.yaml';
     }
 
-    private function parseYaml($file) {
-        if (!File::exists($file)) {
+    private function parseYaml($file)
+    {
+        if (! File::exists($file)) {
             return [];
         }
 

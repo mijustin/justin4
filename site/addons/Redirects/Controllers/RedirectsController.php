@@ -29,7 +29,7 @@ abstract class RedirectsController extends Controller
 
     protected function sortItems(Collection $items, Request $request)
     {
-        if (!$request->get('sort')) {
+        if (! $request->get('sort')) {
             return $items;
         }
 
@@ -41,7 +41,7 @@ abstract class RedirectsController extends Controller
     protected function paginatedItemsResponse(Collection $items, array $columns, Request $request)
     {
         $perPage = Config::get('cp.pagination_size');
-        $currentPage = (int)$request->get('page', 1);
+        $currentPage = (int) $request->get('page', 1);
         $totalCount = $items->count();
         $offset = ($currentPage - 1) * $perPage;
         $items = $items->slice($offset, $perPage);
@@ -57,14 +57,14 @@ abstract class RedirectsController extends Controller
                 'totalPages' => $paginator->lastPage(),
                 'prevPage' => $paginator->previousPageUrl(),
                 'nextPage' => $paginator->nextPageUrl(),
-                'segments' => array_get($paginator->render(new PaginationPresenter($paginator)), 'segments')
+                'segments' => array_get($paginator->render(new PaginationPresenter($paginator)), 'segments'),
             ],
         ];
     }
 
     private function checkAccess()
     {
-        if (!$this->redirectsAccessChecker->hasAccess(User::getCurrent())) {
+        if (! $this->redirectsAccessChecker->hasAccess(User::getCurrent())) {
             throw new UnauthorizedHttpException(403);
         }
     }

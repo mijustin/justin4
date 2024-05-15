@@ -2,10 +2,10 @@
 
 namespace Statamic\Addons\Spock;
 
-use Mockery;
 use Illuminate\Contracts\Logging\Log;
-use Symfony\Component\Process\Process as SymfonyProcess;
+use Mockery;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process as SymfonyProcess;
 
 class CommanderTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,7 +26,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function only_runs_commands_for_whitelisted_environments()
+    public function only_runs_commands_for_whitelisted_environments()
     {
         $this->assertTrue($this->commander->shouldRunCommands());
 
@@ -38,11 +38,11 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function does_not_run_command_if_event_is_ignored()
+    public function does_not_run_command_if_event_is_ignored()
     {
         $this->commander->environment('production')->config([
             'environments' => ['production'],
-            'ignore_events' => [ExampleIgnoredEvent::class]
+            'ignore_events' => [ExampleIgnoredEvent::class],
         ]);
 
         $this->assertTrue($this->commander->shouldRunCommands());
@@ -55,7 +55,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function command_strings_are_converted_to_objects()
+    public function command_strings_are_converted_to_objects()
     {
         $commands = ['echo one', 'echo two'];
 
@@ -63,12 +63,12 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals([
             new Process('echo one'),
-            new Process('echo two')
+            new Process('echo two'),
         ], $this->commander->commands());
     }
 
     /** @test */
-    function a_command_as_a_string_is_converted_to_an_array()
+    public function a_command_as_a_string_is_converted_to_an_array()
     {
         $this->commander->setCommands('string');
 
@@ -78,17 +78,17 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function commands_are_run()
+    public function commands_are_run()
     {
         $this->commander->setCommands([
-            new Process('echo a command that will always work.')
+            new Process('echo a command that will always work.'),
         ])->handle();
 
         $this->log->shouldNotReceive('error');
     }
 
     /** @test */
-    function erroring_commands_are_logged()
+    public function erroring_commands_are_logged()
     {
         $erroringProcess = Mockery::mock(Process::class);
         $genericException = new \Exception('A generic exception');
@@ -100,7 +100,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function failed_commands_are_logged()
+    public function failed_commands_are_logged()
     {
         $failingProcess = Mockery::mock(Process::class);
         $command = 'echo "some output"; nonexistingcommandIhopeneversomeonewouldnameacommandlikethis';
@@ -119,7 +119,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function the_literal_string_no_output_is_shown_if_theres_no_output()
+    public function the_literal_string_no_output_is_shown_if_theres_no_output()
     {
         $failingProcess = Mockery::mock(Process::class);
         $command = 'nonexistingcommandIhopeneversomeonewouldnameacommandlikethis';
@@ -138,7 +138,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function the_literal_string_no_error_is_shown_if_theres_no_error()
+    public function the_literal_string_no_error_is_shown_if_theres_no_error()
     {
         $failingProcess = Mockery::mock(Process::class);
         $command = '(echo "some output"; exit 1)';
@@ -157,10 +157,12 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
-    function commands_can_be_a_closure()
+    public function commands_can_be_a_closure()
     {
-        $this->commander->event(new class {
-            public function foo() {
+        $this->commander->event(new class
+        {
+            public function foo()
+            {
                 return 'bar';
             }
         });
@@ -168,7 +170,7 @@ class CommanderTest extends \PHPUnit_Framework_TestCase
         $this->commander->setCommands(function ($commander) {
             return [
                 'hardcoded command',
-                'dynamic command ' . $commander->event()->foo()
+                'dynamic command '.$commander->event()->foo(),
             ];
         });
 

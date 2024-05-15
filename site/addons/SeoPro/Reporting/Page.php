@@ -2,15 +2,18 @@
 
 namespace Statamic\Addons\SeoPro\Reporting;
 
+use Statamic\API\Content;
 use Statamic\API\File;
 use Statamic\API\YAML;
-use Statamic\API\Content;
 
 class Page
 {
     protected $report;
+
     protected $data;
+
     protected $results;
+
     protected $id;
 
     protected $rules = [
@@ -141,7 +144,7 @@ class Page
         $data = [
             'id' => $this->id,
             'data' => $this->data->all(),
-            'results' => $this->results
+            'results' => $this->results,
         ];
 
         File::put($this->path(), YAML::dump($data));
@@ -153,7 +156,7 @@ class Page
         $parts = array_slice(str_split($key, 2), 0, 2);
 
         return temp_path(vsprintf('/seopro/reports/%s/pages/%s/%s.yaml', [
-            $this->report->id(), implode('/', $parts), $key
+            $this->report->id(), implode('/', $parts), $key,
         ]));
     }
 

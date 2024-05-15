@@ -74,7 +74,6 @@ class AutoRedirectsController extends RedirectsController
     }
 
     /**
-     * @param Request $request
      * @return \Illuminate\Support\Collection
      */
     private function buildRedirectItems(Request $request)
@@ -85,6 +84,7 @@ class AutoRedirectsController extends RedirectsController
         $items = collect($redirects)->map(function ($redirect) use ($logs) {
             /** @var AutoRedirect $redirect */
             $id = base64_encode($redirect->getFromUrl());
+
             return array_merge($redirect->toArray(), [
                 'id' => $id,
                 'checked' => false,

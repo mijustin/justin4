@@ -4,19 +4,25 @@ namespace Statamic\Addons\Bardify\Commands;
 
 use Statamic\API\Content;
 use Statamic\API\Fieldset;
-use Statamic\Extend\Command;
 use Statamic\Console\EnhancesCommands;
+use Statamic\Extend\Command;
 
 class BardifyCommand extends Command
 {
     use EnhancesCommands;
 
     protected $signature = 'bardify';
+
     protected $description = 'Converts a Replicator field into a Bard field.';
+
     protected $fieldsets;
+
     protected $fieldset;
+
     protected $set;
+
     protected $field;
+
     protected $markdown;
 
     public function handle()
@@ -52,6 +58,7 @@ class BardifyCommand extends Command
             return count($set['fields']) > 1;
         })->filter(function ($set) {
             $type = collect($set['fields'])->first()['type'];
+
             return in_array($type, ['text', 'textarea', 'markdown', 'redactor']);
         })->keys();
 
@@ -93,7 +100,7 @@ class BardifyCommand extends Command
 
             return compact('fieldset', 'replicators');
         })->filter(function ($item) {
-            return !$item['replicators']->isEmpty();
+            return ! $item['replicators']->isEmpty();
         })->keyBy(function ($item) {
             return $item['fieldset']->name();
         });
@@ -163,14 +170,15 @@ class BardifyCommand extends Command
     {
         if ($this->set === 'text' && $this->field === 'text') {
             $this->checkLine('No template changes are required because your set and field are both already named text.');
+
             return;
         }
 
         $message = collect([
-            "<comment>[!] Your templates need to be manually updated.</comment>",
+            '<comment>[!] Your templates need to be manually updated.</comment>',
             '',
             "    Any references to your <info>{$this->replicator}</info> field's sets with types of <info>{$this->set}</info> should now be <info>text</info>.",
-            "    Both the set type and the field name itself should both be <info>text</info>.",
+            '    Both the set type and the field name itself should both be <info>text</info>.',
             '',
             '    For example: ',
             '',
@@ -181,7 +189,7 @@ class BardifyCommand extends Command
             '    would become:',
             '',
             "    {{ {$this->replicator} }}",
-            "        {{ if type === \"<info>text</info>\" }} {{ <info>text</info> }} {{ /if }}",
+            '        {{ if type === "<info>text</info>" }} {{ <info>text</info> }} {{ /if }}',
             "    {{ /{$this->replicator} }}",
             '',
             '    Everything else can stay the same!',

@@ -11,4 +11,4 @@ $site_root = '/';
 define('STATAMIC_ROOT', __DIR__.'/../');
 define('APP', realpath(__DIR__.'/../../statamic'));
 
-require __DIR__ . '/../../statamic/bootstrap/start.php';
+require __DIR__.'/../../statamic/bootstrap/start.php';

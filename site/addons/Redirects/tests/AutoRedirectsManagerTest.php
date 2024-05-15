@@ -9,6 +9,7 @@ use Statamic\Testing\TestCase;
 
 /**
  * @group redirects
+ *
  * @coversDefaultClass \Statamic\Addons\Redirects\AutoRedirectsManager
  */
 class AutoRedirectsManagerTest extends TestCase
@@ -35,12 +36,13 @@ class AutoRedirectsManagerTest extends TestCase
         $this->redirectsLogger = $this->getMockBuilder(RedirectsLogger::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $this->storagePath = __DIR__ . '/temp/auto.yaml';
+        $this->storagePath = __DIR__.'/temp/auto.yaml';
         $this->autoRedirectsManager = new AutoRedirectsManager($this->storagePath, $this->redirectsLogger);
     }
 
     /**
      * @test
+     *
      * @covers ::add
      * @covers ::remove
      * @covers ::flush
@@ -139,6 +141,7 @@ class AutoRedirectsManagerTest extends TestCase
 
     /**
      * @test
+     *
      * @covers ::removeRedirectsOfContentId
      */
     public function it_should_remove_all_redirects_from_a_given_content_id()
@@ -174,6 +177,7 @@ class AutoRedirectsManagerTest extends TestCase
 
     /**
      * @test
+     *
      * @covers ::remove
      */
     public function it_should_remove_logs_when_removing_a_redirect()
