@@ -36,8 +36,7 @@ abstract class RedirectsManager
     /**
      * Remove a redirect identified by the given route.
      *
-     * @param string $route
-     *
+     * @param  string  $route
      * @return $this
      */
     public function remove($route)
@@ -80,8 +79,7 @@ abstract class RedirectsManager
     /**
      * Check if a redirect with the given route/url exists.
      *
-     * @param string $route
-     *
+     * @param  string  $route
      * @return bool
      */
     public function exists($route)

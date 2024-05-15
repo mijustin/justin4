@@ -3,8 +3,8 @@
 namespace Statamic\Addons\Spock;
 
 use Statamic\API\User;
-use Statamic\Extend\Listener;
 use Statamic\Contracts\Data\DataEvent;
+use Statamic\Extend\Listener;
 
 class SpockListener extends Listener
 {
@@ -53,7 +53,6 @@ class SpockListener extends Listener
     /**
      * Handle the event, run the command(s).
      *
-     * @param DataEvent $event
      * @return void
      */
     public function run(DataEvent $event)

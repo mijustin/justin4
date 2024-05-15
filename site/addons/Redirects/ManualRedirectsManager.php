@@ -7,9 +7,7 @@ class ManualRedirectsManager extends RedirectsManager
     /**
      * Add or update the given redirect, optionally at a specific position.
      *
-     * @param ManualRedirect $redirect
-     * @param int $position Zero-based position where to insert the redirect.
-     *
+     * @param  int  $position  Zero-based position where to insert the redirect.
      * @return ManualRedirectsManager
      */
     public function add(ManualRedirect $redirect, $position = null)
@@ -33,14 +31,13 @@ class ManualRedirectsManager extends RedirectsManager
     /**
      * Update the position of an existing redirect given by the route.
      *
-     * @param string $route
-     * @param int $position
-     *
+     * @param  string  $route
+     * @param  int  $position
      * @return ManualRedirectsManager
      */
     public function setPosition($route, $position)
     {
-        if (!$this->exists($route)) {
+        if (! $this->exists($route)) {
             return $this;
         }
 
@@ -57,7 +54,7 @@ class ManualRedirectsManager extends RedirectsManager
             $i++;
         }
 
-        if (!isset($redirects[$route])) {
+        if (! isset($redirects[$route])) {
             $redirects[$route] = $data;
         }
 
@@ -81,13 +78,12 @@ class ManualRedirectsManager extends RedirectsManager
     /**
      * Get a redirect by route.
      *
-     * @param string $route
-     *
+     * @param  string  $route
      * @return ManualRedirect
      */
     public function get($route)
     {
-        if (!$this->exists($route)) {
+        if (! $this->exists($route)) {
             return null;
         }
 
@@ -97,7 +93,7 @@ class ManualRedirectsManager extends RedirectsManager
             ->setFrom($route)
             ->setTo($data['to'])
             ->setStatusCode($data['status_code'])
-            ->setRetainQueryStrings((bool)$data['retain_query_strings'])
+            ->setRetainQueryStrings((bool) $data['retain_query_strings'])
             ->setLocale($data['locale'])
             ->setStartDate(isset($data['start_date']) && $data['start_date'] ? new \DateTime($data['start_date']) : null)
             ->setEndDate(isset($data['end_date']) && $data['end_date'] ? new \DateTime($data['end_date']) : null);

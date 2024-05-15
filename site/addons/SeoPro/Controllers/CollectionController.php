@@ -2,13 +2,12 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
+use Illuminate\Http\Request;
+use Statamic\Addons\SeoPro\TranslatesFieldsets;
+use Statamic\API\Collection;
+use Statamic\API\Fieldset;
 use Statamic\API\File;
 use Statamic\API\YAML;
-use Statamic\API\Fieldset;
-use Illuminate\Http\Request;
-use Statamic\API\Collection;
-use Statamic\Addons\SeoPro\Settings;
-use Statamic\Addons\SeoPro\TranslatesFieldsets;
 
 class CollectionController extends Controller
 {
@@ -27,7 +26,7 @@ class CollectionController extends Controller
         $data = $this->preProcessWithBlankFields($fieldset, $data);
 
         return $this->view('edit', [
-            'title' => $collection->title() . ' SEO',
+            'title' => $collection->title().' SEO',
             'data' => $data,
             'fieldset' => $fieldset->toPublishArray(),
             'suggestions' => $this->getSuggestions($fieldset),

@@ -5,7 +5,6 @@ namespace Statamic\Addons\SeoPro;
 use Statamic\API\File;
 use Statamic\API\Parse;
 use Statamic\Extend\Tags;
-use Statamic\Addons\SeoPro\Settings;
 
 class SeoProTags extends Tags
 {

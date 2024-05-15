@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SeoPro\Fieldtypes;
 
-use Statamic\Extend\Fieldtype;
 use Statamic\CP\FieldtypeFactory;
+use Statamic\Extend\Fieldtype;
 
 class FieldsFieldtype extends Fieldtype
 {

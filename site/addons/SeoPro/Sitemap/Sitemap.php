@@ -2,9 +2,9 @@
 
 namespace Statamic\Addons\SeoPro\Sitemap;
 
-use Statamic\API\Content;
-use Statamic\Addons\SeoPro\TagData;
 use Statamic\Addons\SeoPro\Settings;
+use Statamic\Addons\SeoPro\TagData;
+use Statamic\API\Content;
 
 class Sitemap
 {

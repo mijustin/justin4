@@ -2,14 +2,16 @@
 
 namespace Statamic\Addons\Janitor\Commands;
 
-use Statamic\API\Content;
 use Statamic\API\Collection;
+use Statamic\API\Content;
 use Statamic\Extend\Command;
 
 class PurgeCommand extends Command
 {
     protected $signature = 'janitor:purge';
+
     protected $description = 'Purge unnecessary data';
+
     protected $collection;
 
     public function handle()
@@ -30,13 +32,13 @@ class PurgeCommand extends Command
     private function getPurgeFields()
     {
         $input = $this->ask('What fields do you want purge?');
+
         return array_map('trim', explode(',', $input));
     }
 
     private function cleanContent()
     {
         $content = Content::entries($this->collection);
-
 
         $purgeCount = 0;
         $bar = $this->output->createProgressBar($content->count());

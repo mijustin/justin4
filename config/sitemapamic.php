@@ -15,7 +15,6 @@ return [
 
     'mode' => 'single',
 
-
     /*
     |--------------------------------------------------------------------------
     | Cache Key
@@ -26,7 +25,6 @@ return [
     */
 
     'cache' => 'sitemapamic',
-
 
     /*
     |--------------------------------------------------------------------------
@@ -43,7 +41,6 @@ return [
     */
 
     'ttl' => 'forever',
-
 
     /*
     |--------------------------------------------------------------------------
@@ -63,19 +60,18 @@ return [
 
     'defaults' => [
         'articles' => [
-            'include'   => true,
+            'include' => true,
             'frequency' => 'weekly',
-            'priority'  => '0.7'
+            'priority' => '0.7',
         ],
 
         'pages' => [
-            'include'           => true,
-            'frequency'         => 'yearly',
-            'priority'          => '0.5',
+            'include' => true,
+            'frequency' => 'yearly',
+            'priority' => '0.5',
             'includeTaxonomies' => true,
-        ]
+        ],
     ],
-
 
     /*
     |--------------------------------------------------------------------------
@@ -92,7 +88,7 @@ return [
     | If you don't want the Taxonomy included in the sitemap, simply exclude it from the array.
     |
     */
-    'globals'  => [
+    'globals' => [
         'taxonomies' => [
             /*'tags' => [
                 'frequency' => 'yearly',
@@ -100,9 +96,8 @@ return [
             ],
 
             'categories' => []*/
-        ]
+        ],
     ],
-
 
     /*
     |--------------------------------------------------------------------------
@@ -119,5 +114,5 @@ return [
         'include' => 'meta_include_in_xml_sitemap',
         'change_frequency' => 'meta_change_frequency',
         'priority' => 'meta_priority',
-    ]
+    ],
 ];

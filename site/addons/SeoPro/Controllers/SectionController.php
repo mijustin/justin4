@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
-use Statamic\API\Taxonomy;
 use Statamic\API\Collection;
+use Statamic\API\Taxonomy;
 
 class SectionController extends Controller
 {

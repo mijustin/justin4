@@ -9,6 +9,7 @@ use Statamic\Testing\TestCase;
 
 /**
  * @group redirects
+ *
  * @coversDefaultClass \Statamic\Addons\Redirects\ManualRedirectsManager
  */
 class ManualRedirectsManagerTest extends TestCase
@@ -35,12 +36,13 @@ class ManualRedirectsManagerTest extends TestCase
         $this->redirectsLogger = $this->getMockBuilder(RedirectsLogger::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $this->storagePath = __DIR__ . '/temp/manual.yaml';
+        $this->storagePath = __DIR__.'/temp/manual.yaml';
         $this->manualRedirectsManager = new ManualRedirectsManager($this->storagePath, $this->redirectsLogger);
     }
 
     /**
      * @test
+     *
      * @covers ::add
      * @covers ::remove
      * @covers ::flush
@@ -87,6 +89,7 @@ class ManualRedirectsManagerTest extends TestCase
 
     /**
      * @test
+     *
      * @covers ::remove
      */
     public function it_should_remove_logs_when_removing_a_redirect()
@@ -109,6 +112,7 @@ class ManualRedirectsManagerTest extends TestCase
 
     /**
      * @test
+     *
      * @covers ::add
      * @covers ::setPosition
      */

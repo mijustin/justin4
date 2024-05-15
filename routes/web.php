@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 //    'title' => 'Example'
 // ]);
 
-
 Route::statamic('feed', 'feeds.articles', [
     'layout' => 'feed',
     'content_type' => 'atom',

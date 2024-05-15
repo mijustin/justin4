@@ -59,7 +59,6 @@ class Monitor404Controller extends RedirectsController
     }
 
     /**
-     * @param Request $request
      * @return \Illuminate\Support\Collection
      */
     private function buildItems(Request $request)

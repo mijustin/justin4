@@ -2,7 +2,6 @@
 
 namespace Statamic\Addons\SeoPro\Reporting\Rules;
 
-use Statamic\API\Str;
 use Statamic\Addons\SeoPro\Reporting\Rule;
 
 class ThreeSegmentUrls extends Rule

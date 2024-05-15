@@ -2,12 +2,9 @@
 
 namespace Statamic\Addons\SeoPro;
 
-use Statamic\API\File;
-use Statamic\API\Parse;
-use Statamic\Extend\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
-use Statamic\Addons\SeoPro\Middleware\Another;
 use Statamic\Addons\SeoPro\Middleware\GenerateReport;
+use Statamic\Extend\ServiceProvider;
 
 class SeoProServiceProvider extends ServiceProvider
 {
@@ -27,8 +24,8 @@ class SeoProServiceProvider extends ServiceProvider
         $server->setPresets($server->getPresets() + [
             'seo' => [
                 'w' => $this->getConfig('open_graph_image_width'),
-                'h' => $this->getConfig('open_graph_image_height')
-            ]
+                'h' => $this->getConfig('open_graph_image_height'),
+            ],
         ]);
     }
 

@@ -20,8 +20,8 @@ use Statamic\Extend\Extensible;
 
 class ManualRedirectsController extends RedirectsController
 {
-    use ProcessesFields;
     use Extensible;
+    use ProcessesFields;
 
     /**
      * @var ManualRedirectsManager
@@ -89,9 +89,9 @@ class ManualRedirectsController extends RedirectsController
 
         $redirect = (new ManualRedirect())
             ->setFrom($data['from'])
-            ->setTo($data['to_' . $targetType])
+            ->setTo($data['to_'.$targetType])
             ->setLocale($data['locale'])
-            ->setRetainQueryStrings((bool)$data['retain_query_strings'])
+            ->setRetainQueryStrings((bool) $data['retain_query_strings'])
             ->setStatusCode($data['status_code']);
 
         if ($data['timed_activation']) {
@@ -107,7 +107,7 @@ class ManualRedirectsController extends RedirectsController
             ->add($redirect)
             ->flush();
 
-        if (!$request->get('continue') || $request->get('new')) {
+        if (! $request->get('continue') || $request->get('new')) {
             $this->success(trans('cp.saved_success'));
         }
 
@@ -204,7 +204,7 @@ class ManualRedirectsController extends RedirectsController
 
     private function getFieldset()
     {
-        $yaml = File::get($this->getDirectory() . "/resources/fieldsets/manual_redirect.yaml");
+        $yaml = File::get($this->getDirectory().'/resources/fieldsets/manual_redirect.yaml');
         $fields = YAML::parse($yaml);
 
         // Only suggest entries and terms having URLs.
@@ -243,7 +243,7 @@ class ManualRedirectsController extends RedirectsController
             $field['display'] = $label;
             $instructionsKey = sprintf('%s.%s_%s', $namespace, $name, 'instructions');
             $instructions = $this->trans($instructionsKey);
-            if ($instructions !== 'addons.Redirects::' . $instructionsKey) {
+            if ($instructions !== 'addons.Redirects::'.$instructionsKey) {
                 $field['instructions'] = $instructions;
             }
 
@@ -269,7 +269,7 @@ class ManualRedirectsController extends RedirectsController
 
         $targetType = $this->getTargetType($redirect->getTo());
         $data['target_type'] = $targetType;
-        $data['to_' . $targetType] = $redirect->getTo();
+        $data['to_'.$targetType] = $redirect->getTo();
 
         return $data;
     }
@@ -278,11 +278,12 @@ class ManualRedirectsController extends RedirectsController
     {
         $redirects = $this->manualRedirectsManager->all();
         $logs = $this->redirectsLogger->getManualRedirects();
-        $dateFormat = Config::get('system.date_format', 'Y-m-d') . ' H:i';
+        $dateFormat = Config::get('system.date_format', 'Y-m-d').' H:i';
 
         $items = collect($redirects)->map(function ($redirect) use ($dateFormat, $logs) {
             /** @var ManualRedirect $redirect */
             $id = base64_encode($redirect->getFrom());
+
             return array_merge($redirect->toArray(), [
                 'to' => $this->getUrlFromTarget($redirect->getTo()),
                 'target_type' => ucfirst($this->getTargetType($redirect->getTo())),
@@ -292,7 +293,7 @@ class ManualRedirectsController extends RedirectsController
                 'locale' => strtoupper($redirect->getLocale()),
                 'checked' => false,
                 'hits' => isset($logs[$redirect->getFrom()]) ? $logs[$redirect->getFrom()] : 0,
-                'edit_url' => route('redirects.manual.edit', ['id' => $id])
+                'edit_url' => route('redirects.manual.edit', ['id' => $id]),
             ]);
         });
 

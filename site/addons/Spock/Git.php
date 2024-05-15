@@ -8,13 +8,15 @@ use Statamic\Contracts\Data\Users\User;
 class Git
 {
     protected $config;
+
     protected $event;
+
     protected $user;
 
     /**
-     * @param array $config  The Spock config.
-     * @param mixed $event   The event class that Spock listened for.
-     * @param User  $user    The user that triggered the event.
+     * @param  array  $config  The Spock config.
+     * @param  mixed  $event  The event class that Spock listened for.
+     * @param  User  $user  The user that triggered the event.
      */
     public function __construct($config, $event, $user = null)
     {
@@ -68,12 +70,12 @@ class Git
             $parts[] = sprintf('-c "user.email=%s"', $email);
         }
 
-        $message = 'commit -m "' . $this->label();
-        $message .= $this->user ? ' by ' . $this->user->username() : '';
+        $message = 'commit -m "'.$this->label();
+        $message .= $this->user ? ' by '.$this->user->username() : '';
         $message .= '"';
         $parts[] = $message;
 
-        return join(' ', $parts);
+        return implode(' ', $parts);
     }
 
     /**

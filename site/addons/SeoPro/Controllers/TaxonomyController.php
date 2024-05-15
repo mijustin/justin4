@@ -2,13 +2,12 @@
 
 namespace Statamic\Addons\SeoPro\Controllers;
 
-use Statamic\API\File;
-use Statamic\API\YAML;
-use Statamic\API\Fieldset;
-use Statamic\API\Taxonomy;
 use Illuminate\Http\Request;
-use Statamic\Addons\SeoPro\Settings;
 use Statamic\Addons\SeoPro\TranslatesFieldsets;
+use Statamic\API\Fieldset;
+use Statamic\API\File;
+use Statamic\API\Taxonomy;
+use Statamic\API\YAML;
 
 class TaxonomyController extends Controller
 {
@@ -27,7 +26,7 @@ class TaxonomyController extends Controller
         $data = $this->preProcessWithBlankFields($fieldset, $data);
 
         return $this->view('edit', [
-            'title' => $taxonomy->title() . ' SEO',
+            'title' => $taxonomy->title().' SEO',
             'data' => $data,
             'fieldset' => $fieldset->toPublishArray(),
             'suggestions' => $this->getSuggestions($fieldset),

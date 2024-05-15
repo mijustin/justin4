@@ -15,11 +15,11 @@ class RedirectsServiceProvider extends ServiceProvider
         $storagePath = site_storage_path('addons/redirects/');
 
         $this->app->singleton(ManualRedirectsManager::class, function ($app) use ($storagePath) {
-           return new ManualRedirectsManager($storagePath . 'manual.yaml', $app[RedirectsLogger::class]);
+            return new ManualRedirectsManager($storagePath.'manual.yaml', $app[RedirectsLogger::class]);
         });
 
         $this->app->singleton(AutoRedirectsManager::class, function ($app) use ($storagePath) {
-            return new AutoRedirectsManager($storagePath . 'auto.yaml', $app[RedirectsLogger::class]);
+            return new AutoRedirectsManager($storagePath.'auto.yaml', $app[RedirectsLogger::class]);
         });
 
         $this->app->singleton(RedirectsProcessor::class, function ($app) {

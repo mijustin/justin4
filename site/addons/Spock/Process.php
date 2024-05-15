@@ -2,15 +2,15 @@
 
 namespace Statamic\Addons\Spock;
 
-use Symfony\Component\Process\Process as SymfonyProcess;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process as SymfonyProcess;
 
 class Process
 {
     protected $command;
 
     /**
-     * @param string $command
+     * @param  string  $command
      */
     public function __construct($command)
     {

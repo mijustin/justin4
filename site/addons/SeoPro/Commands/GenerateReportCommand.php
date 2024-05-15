@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SeoPro\Commands;
 
-use Statamic\Extend\Command;
 use Statamic\Addons\SeoPro\Reporting\Report;
+use Statamic\Extend\Command;
 
 class GenerateReportCommand extends Command
 {

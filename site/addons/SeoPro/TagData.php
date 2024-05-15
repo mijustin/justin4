@@ -2,19 +2,21 @@
 
 namespace Statamic\Addons\SeoPro;
 
-use Statamic\API\Str;
-use Statamic\API\URL;
+use Statamic\API\Config;
 use Statamic\API\Data;
 use Statamic\API\Page;
 use Statamic\API\Parse;
-use Statamic\API\Config;
-use Statamic\Routing\Route;
+use Statamic\API\Str;
+use Statamic\API\URL;
 use Statamic\Contracts\Data\Data as DataContract;
+use Statamic\Routing\Route;
 
 class TagData
 {
     protected $data;
+
     protected $current;
+
     protected $model;
 
     public function __construct()
@@ -93,7 +95,7 @@ class TagData
 
         // If we have a method here to perform additional parsing, do that now.
         // eg. Limit a string to n characters.
-        if (method_exists($this, $method = 'parse' . ucfirst($key) . 'Field')) {
+        if (method_exists($this, $method = 'parse'.ucfirst($key).'Field')) {
             $item = $this->$method($item);
         }
 
@@ -106,13 +108,13 @@ class TagData
         $separator = $this->data->get('site_name_separator');
 
         if ($this->data->get('site_name_position') === 'before') {
-            $compiled .= $this->data->get('site_name') . ' ' . $separator . ' ';
+            $compiled .= $this->data->get('site_name').' '.$separator.' ';
         }
 
         $compiled .= $this->data->get('title');
 
         if ($this->data->get('site_name_position') === 'after') {
-            $compiled .= ' ' . $separator . ' ' . $this->data->get('site_name');
+            $compiled .= ' '.$separator.' '.$this->data->get('site_name');
         }
 
         return $compiled;
@@ -152,7 +154,7 @@ class TagData
         $value = strip_tags($value);
 
         if (strlen($value) > 320) {
-            $value = substr($value, 0, 320) . '...';
+            $value = substr($value, 0, 320).'...';
         }
 
         return $value;

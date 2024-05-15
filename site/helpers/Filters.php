@@ -9,7 +9,7 @@ class Filters extends Filter
     /**
      * Maps to {{ collection:handle filter="example" }}
      *
-     * @param \Illuminate\Support\Collection $collection
+     * @param  \Illuminate\Support\Collection  $collection
      * @return \Illuminate\Support\Collection
      */
     public function example($collection)

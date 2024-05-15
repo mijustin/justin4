@@ -2,25 +2,31 @@
 
 namespace Statamic\Addons\SeoPro\Reporting;
 
-use Statamic\API\File;
-use Statamic\API\YAML;
-use Statamic\API\Config;
-use Statamic\API\Folder;
-use Statamic\API\Content;
-use Statamic\Routing\Router;
-use Statamic\Addons\SeoPro\TagData;
-use Statamic\Addons\SeoPro\Settings;
-use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Jsonable;
+use Statamic\Addons\SeoPro\Settings;
+use Statamic\Addons\SeoPro\TagData;
+use Statamic\API\Config;
+use Statamic\API\Content;
+use Statamic\API\File;
+use Statamic\API\Folder;
+use Statamic\API\YAML;
+use Statamic\Routing\Router;
 
 class Report implements Arrayable, Jsonable
 {
     protected $id;
+
     protected $pages;
+
     protected $results;
+
     protected $generatePages = false;
+
     protected $date;
+
     protected $score;
+
     public static $reportsToGenerate = [];
 
     public static $rules = [
@@ -197,7 +203,7 @@ class Report implements Arrayable, Jsonable
                     'url' => $page->url(),
                     'id' => $page->id(),
                     'edit_url' => $page->editUrl(),
-                    'results' => $page->getRuleResults()
+                    'results' => $page->getRuleResults(),
                 ];
             });
         }
@@ -277,7 +283,7 @@ class Report implements Arrayable, Jsonable
     {
         File::put($this->path(), YAML::dump([
             'date' => time(),
-            'results' => $this->results
+            'results' => $this->results,
         ]));
 
         return $this;
@@ -285,7 +291,7 @@ class Report implements Arrayable, Jsonable
 
     public function path()
     {
-        return temp_path('seopro/reports/' . $this->id . '/report.yaml');
+        return temp_path('seopro/reports/'.$this->id.'/report.yaml');
     }
 
     public function exists()

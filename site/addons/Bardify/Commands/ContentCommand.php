@@ -9,9 +9,13 @@ use Statamic\Extend\Command;
 class ContentCommand extends Command
 {
     protected $signature = 'bardify:content';
+
     protected $description = 'Convert content fields to Bard fields';
+
     protected $fieldset;
+
     protected $field;
+
     protected $markdown;
 
     public function handle()
@@ -38,15 +42,17 @@ class ContentCommand extends Command
             "Please enter a name for the field.\n",
             " Since \"content\" is reserved for the string of data below your YAML front-matter, and Bard needs \n",
             ' to be saved as an array, you need to choose something else. For example, "story" or "body"',
-        ])->implode(""));
+        ])->implode(''));
 
         if ($field === 'content') {
             $this->error('You must name it something other than "content".');
+
             return $this->getField();
         }
 
         if (collect(Fieldset::get($this->fieldset)->fields())->has($field)) {
             $this->error("This fieldset already has a $field field.");
+
             return $this->getField();
         }
 
@@ -70,9 +76,9 @@ class ContentCommand extends Command
                     'cite' => [
                         'display' => 'Cite',
                         'type' => 'text',
-                    ]
-                ]
-            ]
+                    ],
+                ],
+            ],
         ];
 
         if ($this->markdown = array_get($fields, 'content.type', 'text') === 'markdown') {
@@ -86,7 +92,7 @@ class ContentCommand extends Command
         $fieldset->save();
 
         $this->checkLine("Changed <comment>content</comment> to <comment>{$this->field}</comment> in the fieldset.");
-        $this->line("    A <info>quote</info> set was added to the Bard field as an example.");
+        $this->line('    A <info>quote</info> set was added to the Bard field as an example.');
     }
 
     private function convertContent()
@@ -103,7 +109,7 @@ class ContentCommand extends Command
             $bar->setMessage($item->path(), 'file');
 
             $item->set($this->field, [
-                ['type' => 'text', 'text' => $item->get('content')]
+                ['type' => 'text', 'text' => $item->get('content')],
             ]);
 
             $item->remove('content');
@@ -122,10 +128,10 @@ class ContentCommand extends Command
         $textTag = $this->markdown ? 'text | markdown' : 'text';
 
         $message = collect([
-            "<comment>[!] Your templates need to be manually updated.</comment>",
+            '<comment>[!] Your templates need to be manually updated.</comment>',
             '',
             "    Any references to your <info>content</info> field needs to be changed to <info>{$this->field}</info>.",
-            "    They should also be treated as an array.",
+            '    They should also be treated as an array.',
             '',
             '    For example: ',
             '',

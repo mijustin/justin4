@@ -2,17 +2,20 @@
 
 namespace Statamic\Addons\Janitor\Commands;
 
-use Statamic\API\Content;
 use Statamic\API\Collection;
+use Statamic\API\Content;
 use Statamic\Extend\Command;
 
-require_once(__DIR__.'/../vendor/formatting.php');
+require_once __DIR__.'/../vendor/formatting.php';
 
 class CleanCommand extends Command
 {
     protected $signature = 'janitor:clean';
+
     protected $description = 'Clean up content';
+
     protected $collection;
+
     protected $field;
 
     public function handle()
@@ -21,7 +24,7 @@ class CleanCommand extends Command
         $this->field = $this->getField();
 
         // if ($this->confirm("Do you wish to purge these {$count} fields?")) {
-            $this->cleanContent();
+        $this->cleanContent();
         // }
     }
 

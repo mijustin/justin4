@@ -2,8 +2,8 @@
 
 namespace Statamic\Addons\SeoPro\Reporting\Rules;
 
-use Statamic\API\Str;
 use Statamic\Addons\SeoPro\Reporting\Rule;
+use Statamic\API\Str;
 
 class NoUnderscoresInUrl extends Rule
 {
@@ -28,7 +28,7 @@ class NoUnderscoresInUrl extends Rule
 
     public function processPage()
     {
-        $this->passes = !Str::contains($this->page->url(), '_');
+        $this->passes = ! Str::contains($this->page->url(), '_');
     }
 
     public function pageStatus()

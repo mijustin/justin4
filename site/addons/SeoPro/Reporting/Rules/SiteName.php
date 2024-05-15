@@ -7,6 +7,7 @@ use Statamic\Addons\SeoPro\Reporting\Rule;
 class SiteName extends Rule
 {
     protected $validatesPages = false;
+
     protected $passes;
 
     public function description()

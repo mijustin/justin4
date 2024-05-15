@@ -12,13 +12,13 @@ class RedirectsAccessChecker
 
     public function hasAccess(User $user)
     {
-        if (!$user) {
+        if (! $user) {
             return false;
         }
 
         $roles = $this->getConfig('access_roles', []);
 
-        if (!count($roles)) {
+        if (! count($roles)) {
             return true;
         }
 
@@ -28,7 +28,7 @@ class RedirectsAccessChecker
 
         foreach ($roles as $roleSlug) {
             $role = Role::whereHandle($roleSlug);
-            if (!$role) {
+            if (! $role) {
                 continue;
             }
             if ($user->hasRole($role)) {
