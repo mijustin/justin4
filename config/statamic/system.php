@@ -165,4 +165,5 @@ return [
 
     'row_id_handle' => 'id',
 
+    'multisite' => false,
 ];
