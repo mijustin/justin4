@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "293a9d4188d35dfa686c588a75cd3955",
+    "content-hash": "97f3fd9436e0e66e7eba0b1dbcfb690d",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -2476,21 +2476,21 @@
         },
         {
             "name": "mitydigital/sitemapamic",
-            "version": "2.4.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mitydigital/statamic-sitemapamic.git",
-                "reference": "0db4c528867cc64df7925b50c130b910ca7afe04"
+                "reference": "b69eeb48f875a80aa2744fa7f182c24c1204b717"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mitydigital/statamic-sitemapamic/zipball/0db4c528867cc64df7925b50c130b910ca7afe04",
-                "reference": "0db4c528867cc64df7925b50c130b910ca7afe04",
+                "url": "https://api.github.com/repos/mitydigital/statamic-sitemapamic/zipball/b69eeb48f875a80aa2744fa7f182c24c1204b717",
+                "reference": "b69eeb48f875a80aa2744fa7f182c24c1204b717",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.1",
-                "statamic/cms": "^3.3|^4.0|^5.0"
+                "php": "^8.2",
+                "statamic/cms": "^5.0"
             },
             "type": "statamic-addon",
             "extra": {
@@ -2525,9 +2525,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mitydigital/statamic-sitemapamic/issues",
-                "source": "https://github.com/mitydigital/statamic-sitemapamic/tree/2.4.0"
+                "source": "https://github.com/mitydigital/statamic-sitemapamic/tree/3.0.1"
             },
-            "time": "2024-05-10T00:24:24+00:00"
+            "time": "2024-05-10T23:33:50+00:00"
         },
         {
             "name": "monolog/monolog",
