@@ -85,9 +85,11 @@ article_content:
 slug: audience
 date: '2014-06-01'
 parent: 8ea5e804-f13f-46fc-ac06-f2c82ffcecd9
+meta_title: 'Build your audience first (archived)'
+meta_description: 'This was the landing page for a course I did back in 2014. Since then, I''ve changed my mind on "build your audience first."'
 custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1716933920
+updated_at: 1716934315
 ---
