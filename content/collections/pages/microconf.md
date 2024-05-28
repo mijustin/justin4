@@ -718,9 +718,10 @@ date: '2024-05-28'
 parent: 8ea5e804-f13f-46fc-ac06-f2c82ffcecd9
 meta_title: 'MicroConf conference tips and guide'
 meta_description: 'Going to MicroConf? Here are my best tips on getting the most out of this conference for bootstrapped entrepreneurs.'
+social_sharing_image: microconf2017-less03.jpg
 custom_structured_data:
   code: null
   mode: htmlmixed
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1716935725
+updated_at: 1716935751
 ---
