@@ -1,8 +1,15 @@
 ---
-title: 'Increase product sales'
 id: c0ff6748-46d4-4b77-b405-c26b794c53bc
-published: true
+published: false
+blueprint: default
+title: 'Increase product sales'
 slug: consulting
+parent: 8ea5e804-f13f-46fc-ac06-f2c82ffcecd9
+custom_structured_data:
+  code: null
+  mode: htmlmixed
+updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
+updated_at: 1716935099
 ---
 If you're running an online business (SaaS, digital products, e-commerce), it's likely you have these struggles:
 
