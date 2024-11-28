@@ -104,6 +104,22 @@ data:
           type: hardBreak
         -
           type: text
+          text: '🦋 '
+        -
+          type: text
+          marks:
+            -
+              type: link
+              attrs:
+                href: 'https://bsky.app/profile/mijustin.bsky.social'
+                rel: null
+                target: null
+                title: null
+          text: Bluesky
+        -
+          type: hardBreak
+        -
+          type: text
           text: "💼\_"
         -
           type: text
@@ -116,51 +132,3 @@ data:
                 target: null
                 title: null
           text: LinkedIn
-        -
-          type: hardBreak
-        -
-          type: text
-          text: "🐘\_"
-        -
-          type: text
-          marks:
-            -
-              type: link
-              attrs:
-                href: 'https://mastodon.social/@mijustin'
-                rel: null
-                target: null
-                title: null
-          text: Mastodon
-        -
-          type: hardBreak
-        -
-          type: text
-          text: "🧵\_"
-        -
-          type: text
-          marks:
-            -
-              type: link
-              attrs:
-                href: 'https://www.threads.net/@mijustin'
-                rel: null
-                target: null
-                title: null
-          text: Threads
-        -
-          type: hardBreak
-        -
-          type: text
-          text: "🐦\_"
-        -
-          type: text
-          marks:
-            -
-              type: link
-              attrs:
-                href: 'https://twitter.com/mijustin'
-                rel: null
-                target: null
-                title: null
-          text: Twitter
