@@ -2476,16 +2476,16 @@
         },
         {
             "name": "mitydigital/sitemapamic",
-            "version": "3.0.1",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mitydigital/statamic-sitemapamic.git",
-                "reference": "b69eeb48f875a80aa2744fa7f182c24c1204b717"
+                "reference": "a88bd146f4968e57f44c6117bf319842d434f5f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mitydigital/statamic-sitemapamic/zipball/b69eeb48f875a80aa2744fa7f182c24c1204b717",
-                "reference": "b69eeb48f875a80aa2744fa7f182c24c1204b717",
+                "url": "https://api.github.com/repos/mitydigital/statamic-sitemapamic/zipball/a88bd146f4968e57f44c6117bf319842d434f5f6",
+                "reference": "a88bd146f4968e57f44c6117bf319842d434f5f6",
                 "shasum": ""
             },
             "require": {
@@ -2494,14 +2494,14 @@
             },
             "type": "statamic-addon",
             "extra": {
-                "statamic": {
-                    "name": "Sitemapamic",
-                    "description": "Adds an XML sitemap to a Statamic site."
-                },
                 "laravel": {
                     "providers": [
                         "MityDigital\\Sitemapamic\\ServiceProvider"
                     ]
+                },
+                "statamic": {
+                    "name": "Sitemapamic",
+                    "description": "Adds an XML sitemap to a Statamic site."
                 }
             },
             "autoload": {
@@ -2525,9 +2525,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mitydigital/statamic-sitemapamic/issues",
-                "source": "https://github.com/mitydigital/statamic-sitemapamic/tree/3.0.1"
+                "source": "https://github.com/mitydigital/statamic-sitemapamic/tree/3.2.0"
             },
-            "time": "2024-05-10T23:33:50+00:00"
+            "time": "2024-08-28T07:54:59+00:00"
         },
         {
             "name": "monolog/monolog",
