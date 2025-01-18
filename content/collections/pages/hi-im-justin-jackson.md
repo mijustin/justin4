@@ -35,21 +35,7 @@ article_content:
                 text: Transistor.fm
               -
                 type: text
-                text: ' (podcast hosting and analytics). I write about '
-              -
-                type: text
-                marks:
-                  -
-                    type: link
-                    attrs:
-                      href: 'https://justinjackson.ca/best-saas-marketing-strategies'
-                      rel: null
-                      target: null
-                      title: null
-                text: 'SaaS marketing'
-              -
-                type: text
-                text: ', the reality of '
+                text: ' (podcast hosting and analytics). I write about the reality of '
               -
                 type: text
                 marks:
@@ -64,35 +50,6 @@ article_content:
               -
                 type: text
                 text: ', pursuing a good life, building calm companies, business ethics, and creating a better society.'
-  -
-    type: paragraph
-    content:
-      -
-        type: text
-        text: 'In 2024, the main theme of my writing will be '
-      -
-        type: text
-        marks:
-          -
-            type: bold
-        text: 'marketing and growth tips for SaaS founders'
-      -
-        type: text
-        text: ". I'll share the real-world results from experiments at my company ("
-      -
-        type: text
-        marks:
-          -
-            type: link
-            attrs:
-              href: 'https://transistor.fm/?via=justin'
-              rel: null
-              target: null
-              title: null
-        text: Transistor
-      -
-        type: text
-        text: ).
   -
     type: paragraph
     content:
@@ -578,7 +535,7 @@ seo:
 template: home
 slug: hi-im-justin-jackson
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1715189932
+updated_at: 1737161417
 date: '2024-01-13'
 custom_structured_data:
   code: null
