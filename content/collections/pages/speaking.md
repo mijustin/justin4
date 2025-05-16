@@ -11,7 +11,12 @@ article_content:
         content:
           -
             type: text
-            text: "\"Justin Jackson gave an extremely entertaining talk about product & marketing.\" –\_Luis Colón, attendee"
+            text: '"Justin Jackson gave an extremely entertaining talk about product & marketing."'
+          -
+            type: hardBreak
+          -
+            type: text
+            text: "–\_Luis Colón, attendee"
   -
     type: set
     attrs:
@@ -545,7 +550,7 @@ seo:
 slug: speaking
 date: '2023-11-21'
 updated_by: 0cf68b9f-296d-4280-83ba-2fcfa61746b1
-updated_at: 1747419491
+updated_at: 1747419507
 custom_structured_data:
   code: null
   mode: htmlmixed
