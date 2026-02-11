@@ -4,7 +4,7 @@
     {{ partial:head }}
 </head>
 <body class="bg-white font-mono relative">
-    <header class="zine"></header>
+    <header class="zine">{{ partial:nav }}</header>
         <div id="site" class="px-3 relative min-h-site">
             {{ template_content }}
             {{ unless hide_justin }}<div id="justin-heads"></div>{{ /unless }}
