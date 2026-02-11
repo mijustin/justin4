@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::statamic('feed', 'feeds.articles', [
     'layout' => 'feed',
-    'content_type' => 'atom',
+    'content_type' => 'xml',
 ]);
 Route::statamic('feed/atom', 'feeds.articles', [
     'layout' => 'feed',
-    'content_type' => 'atom',
+    'content_type' => 'xml',
 ]);
 
 Route::permanentRedirect('ladder', 'freedom');
