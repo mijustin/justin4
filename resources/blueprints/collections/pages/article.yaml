@@ -10,6 +10,7 @@ tabs:
             handle: title
             field:
               type: text
+              required: true
               display: Title
               width: 66
               localizable: true
@@ -20,6 +21,7 @@ tabs:
             field:
               type: text
               localizable: true
+              validate: 'max:200'
               display: Slug
               width: 33
           -
@@ -200,15 +202,6 @@ tabs:
               default: now
               validate:
                 - required
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true
   seo:
     display: SEO
     sections:
