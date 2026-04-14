@@ -13,7 +13,7 @@ import re
 import shutil
 import sys
 from datetime import datetime
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 
 # ── Configuration ──────────────────────────────────────────────────────────────
@@ -103,7 +103,7 @@ def plain_text(t: dict) -> str:
     for m in entities.get("media", []):
         text = text.replace(m["url"], "")
 
-    return text.strip()
+    return unescape(text.strip())
 
 
 def format_text(t: dict) -> str:
@@ -125,7 +125,9 @@ def format_text(t: dict) -> str:
     for m in entities.get("media", []):
         text = text.replace(m["url"], "")
 
-    text = text.strip()
+    # Unescape any pre-escaped entities from the Twitter export (e.g. &lt; → <)
+    # before re-escaping, to avoid double-encoding.
+    text = unescape(text.strip())
 
     # Escape only the characters that are dangerous in HTML element content.
     # Do NOT escape single quotes — html.escape() converts ' to &#x27;, and
@@ -260,23 +262,26 @@ def render_tweet_page(t: dict, all_ids: set) -> str:
     parent_id = t.get("in_reply_to_status_id_str")
     if parent_id:
         if parent_id in all_ids:
-            parent_link = f'<a href="/tweets/{parent_id}/">&#8593; View parent tweet</a>'
+            parent_link = f'<a href="/tweets/{parent_id}/">&#8593; Parent tweet</a>'
         else:
             parent_link = (
                 f'<a href="https://twitter.com/i/web/status/{parent_id}" '
-                f'rel="noopener noreferrer" target="_blank">&#8593; View parent tweet ↗</a>'
+                f'rel="noopener noreferrer" target="_blank">&#8593; Parent tweet</a>'
             )
 
-    nav_links = '<a href="/tweets/">&#8592; All tweets</a>'
+    nav_items = '<a href="/tweets/">&#8592; All tweets</a>'
     if parent_link:
-        nav_links += f'<span class="tw-nav-sep">·</span>{parent_link}'
+        nav_items += parent_link
+
+    footer = '<footer class="tw-single-footer"><a href="https://justinjackson.ca">justinjackson.ca</a></footer>'
 
     return f"""\
 {head}
 <body class="tw-single">
   <div class="tw-wrap">
-    <nav class="tw-back">{nav_links}</nav>
+    <nav class="tw-back">{nav_items}</nav>
     {card}
+    {footer}
   </div>
 </body>
 </html>"""
@@ -334,6 +339,7 @@ def render_index_page(
   <div class="tw-wrap">
 
     <header class="tw-header">
+      <div class="tw-header-top"><a href="https://justinjackson.ca">justinjackson.ca</a></div>
       <h1>Tweets</h1>
       <div class="tw-search-wrap">
         <input type="search" id="tw-search"
