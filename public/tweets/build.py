@@ -147,6 +147,20 @@ def format_text(t: dict) -> str:
     return text
 
 
+# ── MP4 index (tweet_id → local web path) ───────────────────────────────────────
+# Built once in main() before pages are generated. Maps each tweet ID that has
+# a local MP4 file to its /tweets/media/… path for use in <video> elements.
+MP4_INDEX: dict[str, str] = {}
+
+def build_mp4_index(output_media: Path) -> None:
+    for f in output_media.glob("*.mp4"):
+        tid = f.name.split("-")[0]
+        # Prefer higher-bitrate file if multiple exist (take largest by size)
+        path = f"/tweets/media/{f.name}"
+        if tid not in MP4_INDEX or f.stat().st_size > Path(output_media / MP4_INDEX[tid].split("/")[-1]).stat().st_size:
+            MP4_INDEX[tid] = path
+
+
 # ── Media rendering ─────────────────────────────────────────────────────────────
 def media_html(t: dict) -> str:
     entities = t.get("extended_entities") or t.get("entities", {})
@@ -165,12 +179,24 @@ def media_html(t: dict) -> str:
                 f'<img src="{local}" alt="" loading="lazy" class="tw-media-img">'
             )
         else:  # video / animated_gif
-            parts.append(
-                f'<div class="tw-video-wrap">'
-                f'<img src="{local}" alt="" loading="lazy" class="tw-media-img">'
-                f'<span class="tw-play-btn" aria-label="Video">&#9654;</span>'
-                f'</div>'
-            )
+            mp4 = MP4_INDEX.get(t["id"])
+            if mp4:
+                loop_attr = ' loop' if m["type"] == "animated_gif" else ''
+                parts.append(
+                    f'<div class="tw-video-wrap">'
+                    f'<video controls preload="none" poster="{local}"'
+                    f' class="tw-media-img"{loop_attr}>'
+                    f'<source src="{mp4}" type="video/mp4">'
+                    f'</video>'
+                    f'</div>'
+                )
+            else:
+                parts.append(
+                    f'<div class="tw-video-wrap">'
+                    f'<img src="{local}" alt="" loading="lazy" class="tw-media-img">'
+                    f'<span class="tw-play-btn" aria-label="Video">&#9654;</span>'
+                    f'</div>'
+                )
 
     n = min(len(parts), 4)
     return f'<div class="tw-media tw-media-{n}">{"".join(parts)}</div>'
@@ -432,6 +458,7 @@ def main() -> None:
 
     # Media
     copy_media(output_media)
+    build_mp4_index(output_media)
 
     # Build ID set for parent tweet lookups
     all_ids = {t["id"] for t in tweets}
