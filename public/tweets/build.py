@@ -288,24 +288,45 @@ def render_index_page(
     page_num: int,
     total_pages: int,
     total_count: int,
+    view: str = "all",   # "all" or "top"
 ) -> str:
-    cards         = "\n".join(tweet_card(t) for t in page_tweets)
-    total_fmt     = f"{total_count:,}"
-    canonical     = "/tweets/" if page_num == 1 else f"/tweets/page/{page_num}/"
+    cards     = "\n".join(tweet_card(t) for t in page_tweets)
+    total_fmt = f"{total_count:,}"
+
+    base      = "/tweets/top/" if view == "top" else "/tweets/"
+    base_page = f"{base}page/" if view == "top" else "/tweets/page/"
+
+    if page_num == 1:
+        canonical = base
+    else:
+        canonical = f"{base_page}{page_num}/"
 
     prev_link = ""
     next_link = ""
     if page_num > 1:
-        prev_url  = "/tweets/" if page_num == 2 else f"/tweets/page/{page_num - 1}/"
-        prev_link = f'<a href="{prev_url}" class="tw-pager">&#8592; Newer</a>'
+        prev_url  = base if page_num == 2 else f"{base_page}{page_num - 1}/"
+        prev_link = f'<a href="{prev_url}" class="tw-pager">&#8592; Prev</a>'
     if page_num < total_pages:
-        next_link = f'<a href="/tweets/page/{page_num + 1}/" class="tw-pager">Older &#8594;</a>'
+        next_link = f'<a href="{base_page}{page_num + 1}/" class="tw-pager">Next &#8594;</a>'
 
+    title_suffix = " – Top tweets" if view == "top" else ""
     head = page_head(
-        title=f"Tweets{SUFFIX}",
+        title=f"Tweets{title_suffix}{SUFFIX}",
         canonical=canonical,
-        description="Justin Jackson's full tweet archive – searchable and browsable.",
+        description="Justin Jackson's most-liked tweets, ranked by likes." if view == "top"
+                    else "Justin Jackson's full tweet archive – searchable and browsable.",
     )
+
+    tab_all      = 'class="tw-tab tw-tab-view"'
+    tab_top      = 'class="tw-tab tw-tab-view"'
+    tab_tweets   = 'class="tw-tab"'
+    tab_replies  = 'class="tw-tab"'
+    tab_retweets = 'class="tw-tab"'
+
+    if view == "top":
+        tab_top = 'class="tw-tab tw-tab-view active"'
+    else:
+        tab_all = 'class="tw-tab tw-tab-view active"'
 
     return f"""\
 {head}
@@ -325,10 +346,11 @@ def render_index_page(
       <main class="tw-main">
 
         <nav class="tw-tabs" aria-label="Filter">
-          <button class="tw-tab active" data-filter="all">All</button>
-          <button class="tw-tab" data-filter="tweet">Tweets</button>
-          <button class="tw-tab" data-filter="reply">Replies</button>
-          <button class="tw-tab" data-filter="retweet">Retweets</button>
+          <a href="/tweets/top/" {tab_top}>Top</a>
+          <a href="/tweets/" {tab_all}>All</a>
+          <button {tab_tweets} data-filter="tweet">Tweets</button>
+          <button {tab_replies} data-filter="reply">Replies</button>
+          <button {tab_retweets} data-filter="retweet">Retweets</button>
         </nav>
 
         <div id="tw-search-results" class="tw-search-results" hidden></div>
@@ -418,12 +440,12 @@ def main() -> None:
             print(f"  {i:,}/{total:,}…", flush=True)
     print("  Done.", flush=True)
 
-    # Paginated index pages
+    # Paginated index pages (chronological)
     print(f"Generating {total_pages:,} index pages…", flush=True)
     for page_num in range(1, total_pages + 1):
         start = (page_num - 1) * TWEETS_PER_PAGE
         chunk = tweets[start : start + TWEETS_PER_PAGE]
-        html  = render_index_page(chunk, page_num, total_pages, total)
+        html  = render_index_page(chunk, page_num, total_pages, total, view="all")
 
         if page_num == 1:
             (OUTPUT_DIR / "index.html").write_text(html, encoding="utf-8")
@@ -434,6 +456,28 @@ def main() -> None:
 
         if page_num % 100 == 0:
             print(f"  Page {page_num:,}/{total_pages:,}…", flush=True)
+    print("  Done.", flush=True)
+
+    # Top pages (sorted by likes descending)
+    top_tweets = sorted(tweets, key=lambda t: int(t.get("favorite_count", 0)), reverse=True)
+    top_pages  = (total + TWEETS_PER_PAGE - 1) // TWEETS_PER_PAGE
+    print(f"Generating {top_pages:,} Top pages…", flush=True)
+    for page_num in range(1, top_pages + 1):
+        start = (page_num - 1) * TWEETS_PER_PAGE
+        chunk = top_tweets[start : start + TWEETS_PER_PAGE]
+        html  = render_index_page(chunk, page_num, top_pages, total, view="top")
+
+        if page_num == 1:
+            top_dir = OUTPUT_DIR / "top"
+            top_dir.mkdir(parents=True, exist_ok=True)
+            (top_dir / "index.html").write_text(html, encoding="utf-8")
+        else:
+            page_dir = OUTPUT_DIR / "top" / "page" / str(page_num)
+            page_dir.mkdir(parents=True, exist_ok=True)
+            (page_dir / "index.html").write_text(html, encoding="utf-8")
+
+        if page_num % 100 == 0:
+            print(f"  Page {page_num:,}/{top_pages:,}…", flush=True)
     print("  Done.", flush=True)
 
     # Search index

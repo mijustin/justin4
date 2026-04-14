@@ -6,7 +6,7 @@
   const searchInput   = document.getElementById("tw-search");
   const searchResults = document.getElementById("tw-search-results");
   const tweetList     = document.getElementById("tw-list");
-  const tabs          = document.querySelectorAll(".tw-tab");
+  const tabs          = document.querySelectorAll(".tw-tab:not(.tw-tab-view)");
   const showRadios    = document.querySelectorAll('input[name="show"]');
 
   if (!searchInput) return;
